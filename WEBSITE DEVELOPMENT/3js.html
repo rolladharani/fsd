@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>
+            Objects,Date
+        </title>
+    </head>
+    <body>
+        <script>
+            
+             var d ={ 
+                100:2,
+                "TB":23
+            };
+            console.log(d);
+            console.log(d["TB"]);
+            console.log(d.TB);
+            console.log("ADDING");
+            d[100]=4;
+            console.log(d);
+            console.log("DELETING");
+            delete d[100];
+            console.log(d);
+            console.log("DATE:-");
+            Object.entries(d).map(ele =>{
+                console.log("Key:",ele[0], "Values: ",ele[1]);
+            });
+            var k= new Date();
+            console.log(k);
+            console.log(k.getDate());
+            console.log(k.getDay());
+            console.log(k.getFullYear());
+            console.log(k.getMilliseconds());
+            console.log(k.getTimezoneOffset());
+        </script>
+    </body>
+</html>

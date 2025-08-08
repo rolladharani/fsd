@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Aqua</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .gif-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .bg-gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-gif {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            /* mix-blend-mode: lighten; optional: adds blending effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://i.pinimg.com/originals/8e/8c/72/8e8c72a1459ad7332b14306bea1af865.gif" class="bg-gif">
+        <img src="https://giffiles.alphacoders.com/201/20140.gif" class="overlay-gif">
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .filters select, .filters input {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .section-title {
+      margin: 30px 0 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .featured {
+      display: flex;
+      gap: 15px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .featured .product-card {
+      min-width: 200px;
+      flex: 0 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Marketplace</h1>
+
+  <div class="filters">
+    <select>
+      <option>All Products</option>
+      <option>Fruits</option>
+      <option>Vegetables</option>
+      <option>Dairy</option>
+    </select>
+    <select>
+      <option>All Farming Types</option>
+      <option>Organic</option>
+      <option>Hydroponic</option>
+    </select>
+    <select>
+      <option>All Locations</option>
+      <option>Andhra Pradesh</option>
+      <option>Telangana</option>
+    </select>
+    <input type="text" placeholder="Price Range (e.g. 50-100)" />
+  </div>
+
+  <div class="section-title">Available Products</div>
+
+  <div class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x140?text=Tomatoes" alt="Tomatoes" />
+      <h3>Organic Tomatoes</h3>
+      <p><strong>₹80/kg</strong> (Market Avg: ₹95/kg)</p>
+      <p>Green Valley Farms</p>
+      <p>Visakhapatnam</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x140?text=Carrots" alt="Carrots" />
+      <h3>Fresh Carrots</h3>
+      <p><strong>₹50/kg</strong></p>
+      <p>Sunrise Agro</p>
+      <p>Kurnool</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x140?text=Milk" alt="Milk" />
+      <h3>Organic Cow Milk</h3>
+      <p><strong>₹60/liter</strong></p>
+      <p>Pure Dairy Farms</p>
+      <p>Guntur</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="section-title">Featured Deals</div>
+
+  <div class="featured">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x140?text=Mangoes" alt="Mangoes" />
+      <h3>Seasonal Mangoes</h3>
+      <p><strong>₹100/dozen</strong></p>
+      <p>Organic Harvest</p>
+      <button>View Details</button>
+    </div>
+    <div class="product-card">
+      <img src="https://via.placeholder.com/200x140?text=Spinach" alt="Spinach" />
+      <h3>Hydroponic Spinach</h3>
+      <p><strong>₹40/bundle</strong></p>
+      <p>Urban Greens</p>
+      <button>View Details</button>
+    </div>
+  </div>
+
+</body>
+</html>

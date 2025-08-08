@@ -1,0 +1,125 @@
+<html>
+    <head><title>Solar System</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .six{
+            width:700px;
+            height: 700px;
+            border: 3px solid black;
+            border-radius: 50%;
+             position: relative;
+        }
+        .p6{
+            width:100px;
+            height:100px;
+            /* object-fit: contain; */
+            border-radius: 50%;
+            background-image: radial-gradient(red,orangered);
+            position: absolute;
+            top:350px;
+            left:350px;
+            animation: ani 15s linear 1s infinite;
+        }
+         @keyframes ani{
+            0%{
+                transform: rotateZ(0deg) translateX(350px);
+            }
+            100%{
+                transform: rotateZ(360deg) translateX(350px);
+            }
+        }
+         .five{
+            width:600px;
+            height: 600px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin: 50px;   
+        }
+        /*
+     .four{
+            width:500px;
+            height: 500px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin: 50px;   
+        }
+        .three{
+            width:400px;
+            height: 400px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin: 50px;   
+        }
+        .two{
+            width:300px;
+            height: 300px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin: 50px;   
+        }
+        .sun{
+            width:150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: radial-gradient(yellow,orange);
+            margin:75px;
+            animation-name: suna;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+        @keyframes suna{
+            0%{
+                box-shadow: 0px 0px 5px 5px orangered;
+            }
+            100%{
+                box-shadow: 0px 0px 10px 10px orangered;
+            }
+        }
+        .mer{
+            width:120px;
+            height:120px;
+            object-fit: contain;
+            animation: P1 15s infinite linear;
+            margin:10px;
+
+        }
+        .ven{
+            width:120px;
+            height:120px;
+            object-fit: contain;
+            animation: P2 30s infinite linear;
+             margin:-30px;
+            /* position: relative;
+            top:-500px; } */
+        /* 
+        } */ 
+
+        
+    </style>
+    </head>
+    <body>
+        <div class="six">
+            <div class="p6"></div>
+        </div>
+            <!-- <div><img class="p6" src="./JourneyLens_Files/MER.png"</div> -->
+        <div class="five">
+            <div class="four">
+                <div class="three">
+                    <div class="two">
+                        <div class="sun">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+                                <!-- <div><img class="mer" src="./JourneyLens_Files/MER.png"></div>
+                        <div><img class="ven" src="./JourneyLens_Files/ven2.png"</div> -->
+
+    </body>
+</html>

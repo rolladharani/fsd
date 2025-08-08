@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Automation cards</title>
+        <style>
+            .parent-card{
+                width:100%;
+                
+
+            }
+            .card{
+                width:320px;
+                height:400px;
+                display: flex;
+                flex-direction: column;
+            }
+            first-section img{
+                width: 90%;
+                height:50%;
+            }
+            second-section{
+                font-size: 30px;
+                
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent-card">
+            <img src="./Assets/Cow Milk.webp"/>
+            
+
+        </div>
+    
+        <script>
+            Mycards=[
+                {
+                    Image:"",
+                    Price:"1500",
+                    Farm:"one",
+                },
+                {
+                    Image:"",
+                    Price:"2000",
+                    Farm:"two",
+                },
+                  {
+                    Image:"",
+                    Price:"2400",
+                    Farm:"three",
+                },
+                  {
+                    Image:"",
+                    Price:"2300",
+                    Farm:"four",
+                },
+                  {
+                    Image:"",
+                    Price:"3000",
+                    Farm:"five",
+                },
+                 {
+                    Image:"",
+                    Price:"200",
+                    Farm:"six",
+                },
+                 {
+                    Image:"",
+                    Price:"5400",
+                    Farm:"eight",
+                },
+                 {
+                    Image:"",
+                    Price:"2300",
+                    Farm:"nine",
+                },
+                 {
+                    Image:"",
+                    Price:"600",
+                    Farm:"Ten",
+                },
+       
+                
+                
+            ]
+            Cards=Cards.join("");
+            var Cards=Mycards.map((ele)=>{
+                return (` <div class="card">
+            <div class="first-section">
+                <img src=${ele.Image}>
+            </div>
+            <div class="second-section">
+                <div>Price:${ele.price}</div>
+                <div>Farm:${ele.Farm}</div>
+            </div>
+            </div>`)
+
+            }
+        )
+        var parent =document.getElementsByClassName('parent-card');
+        parent.innerHTML=Cards;
+
+        </script>
+    </body>
+</html>

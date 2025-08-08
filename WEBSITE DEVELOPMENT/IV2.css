@@ -1,0 +1,58 @@
+* {
+      margin: 0;
+      padding: 0;
+      font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .parent {
+      width: 100vw;
+      height: 100vh;
+      background-image: url("M_3.jpeg");
+      position: relative;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .JK, .pb, .HP, .UK, .Har, .Raj, .Guj, .MP, .UP, .Bihar, .Jhar, .WB, .sik, .Arp, .As, .meg, .ng, .ma, .mz, .tr, .mr, .ch, .od, .Ts, .Ap, .ka, .Go, .ke, .Tn {
+      font-size: 1.2vw;
+      font-family: Poppins, sans-serif;
+      font-style: italic;
+      position: absolute;
+      font-weight: bold;
+    }
+
+    .JK { top: 7.5vh; left: 40vw; color: black; }
+    .pb { top: 20.5vh; left: 39vw; color: darkblue; }
+    .HP { top: 16.5vh; left: 41.5vw; color: red; }
+    .UK { top: 23vh; left: 44vw; color: red; }
+    .Har { top: 25vh; left: 38.5vw; color: darkblue; }
+    .Raj { top: 33vh; left: 36vw; color: white; }
+    .Guj { top: 44vh; left: 33vw; color: darkgreen; }
+    .MP { top: 44vh; left: 41vw; color: yellow; }
+    .UP { top: 32vh; left: 45vw; color: black; }
+    .Bihar { top: 35.5vh; left: 54vw; color: black; }
+    .Jhar { top: 42vh; left: 53vw; color: white; transform: rotate(-38deg); }
+    .WB { top: 43vh; left: 56.6vw; color: greenyellow; }
+    .sik { top: 30vh; left: 58.5vw; color: red; }
+    .Arp { top: 26.75vh; left: 66vw; color: darkblue; }
+    .As { top: 33vh; left: 63vw; color: white; }
+    .meg { top: 36vh; left: 59.5vw; color: darkblue; }
+    .tr { top: 42vh; left: 61vw; color: black; }
+    .ng { top: 33.5vh; left: 67.5vw; color: rgb(16, 203, 63); }
+    .ma { top: 37vh; left: 66.5vw; color: rgb(31, 170, 180); }
+    .mz { top: 42vh; left: 65vw; color: rgb(100, 0, 100); }
+    .mr { top: 54vh; left: 37vw; color: white; }
+    .ch { top: 50vh; left: 47vw; color: darkblue; transform: rotate(-50deg); }
+    .od { top: 52vh; left: 52vw; color: black; }
+    .Ts { top: 61vh; left: 43.5vw; color: black; }
+    .Ap { top: 66vh; left: 43vw; color: white; transform: rotate(-38deg); }
+    .ka { top: 74vh; left: 39vw; color: yellow; }
+    .Go { top: 67.5vh; left: 35.5vw; color: darkgreen; }
+    .ke { top: 83vh; left: 39.5vw; color: black; transform: rotate(60deg); }
+    .Tn { top: 82.5vh; left: 41.5vw; color: darkblue; }
+
+    .JK a, .pb a, .HP a, .UK a, .Har a, .Raj a, .Guj a, .MP a, .UP a, .Bihar a, .Jhar a, .WB a, .sik a, .Arp a, .As a, .meg a, .ng a, .ma a, .mz a, .tr a, .mr a, .ch a, .od a, .Ts a, .Ap a, .ka a, .Go a, .ke a, .Tn a {
+      text-decoration: none;
+      color: inherit;
+    }

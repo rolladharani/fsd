@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apiculture Feeding</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Poppins, sans-serif;
+      background: #f5fff7;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #e8f9eb;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #4caf50;
+    }
+
+    header p {
+      color: #666;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      gap: 20px;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-left: 5px solid #a0d6a7;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .media {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .media iframe {
+      width: 80%;
+      height: 300px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .nutrition {
+      padding: 30px;
+    }
+
+    .nutri1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .nutrition-table {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .tabb {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .tabb th, .tabb td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .form-div {
+      padding: 40px;
+      background: #f1fff4;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+
+    .form-div input, .form-div textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .form-div button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        padding: 15px;
+      }
+
+      .media iframe {
+        width: 100%;
+        height: auto;
+      }
+
+      .nutri1 {
+        grid-template-columns: 1fr;
+      }
+
+      .tabb, .tabb th, .tabb td {
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .tabb th {
+        display: none;
+      }
+
+      .tabb tr {
+        display: block;
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+
+      .tabb td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #4caf50;
+      }
+
+      .form-div {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Apiculture Feeding</h1>
+    <p>Enhancing bee health through balanced seasonal nutrition</p>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Bee Nutrition Matters</h2>
+      <p>Proper feeding improves bee immunity, colony strength, and honey production. Learn about seasonal feeding techniques and ingredients.</p>
+    </div>
+    <img src="your-image.png" alt="Bee Feeding">
+  </section>
+
+  <section class="gallery">
+    <div class="card">
+      <h3>Seasonal Feeding</h3>
+      <p>Adapt feeding based on nectar availability across Spring, Summer, Monsoon, and Winter.</p>
+    </div>
+    <div class="card">
+      <h3>Protein Supplements</h3>
+      <p>Use patties made of soy flour, brewer's yeast, or pollen substitute to aid colony growth.</p>
+    </div>
+    <div class="card">
+      <h3>Sugar Syrup Ratios</h3>
+      <p>1:1 syrup for Spring buildup, 2:1 for Winter storage. Avoid impurities and overheating.</p>
+    </div>
+  </section>
+
+  <section class="media">
+    <h2>Watch: Best Practices</h2>
+    <iframe src="your-video-link.mp4"></iframe>
+  </section>
+
+  <section class="nutrition">
+    <h2>Nutritional Sources</h2>
+    <div class="nutri1">
+      <div>🌼 Pollen: Protein source</div>
+      <div>🍯 Honey: Carbohydrates</div>
+      <div>🧂 Minerals: Salt lick near hives</div>
+      <div>💧 Water: Essential for digestion</div>
+    </div>
+  </section>
+
+  <section class="nutrition-table">
+    <h2>Feeding Schedule by Season</h2>
+    <table class="tabb">
+      <tr>
+        <th>Season</th>
+        <th>Recommended Feeding</th>
+      </tr>
+      <tr>
+        <td data-label="Season">🌸 Spring</td>
+        <td data-label="Recommended Feeding">1:1 Sugar Syrup + Protein Patties</td>
+      </tr>
+      <tr>
+        <td data-label="Season">☀️ Summer</td>
+        <td data-label="Recommended Feeding">Monitor nectar flow, minimal feeding</td>
+      </tr>
+      <tr>
+        <td data-label="Season">🌧️ Monsoon</td>
+        <td data-label="Recommended Feeding">Dry sugar or patties, avoid moisture</td>
+      </tr>
+      <tr>
+        <td data-label="Season">❄️ Winter</td>
+        <td data-label="Recommended Feeding">2:1 Sugar Syrup or Dry Sugar Boards</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="form-div">
+    <h2>Share Your Practice</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Describe your feeding method..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+</body>
+</html>

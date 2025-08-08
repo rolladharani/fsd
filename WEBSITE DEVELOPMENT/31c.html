@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Header DropDowns</title>
+        <style>
+            .parent{
+                width:100px;
+                border:1px solid black;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                /* background-color: coral; */
+            }
+            .c1{
+                width:100%;
+                text-align: center;
+                padding:10px
+
+            }
+            .c2{
+                display: none;
+                border:2px solid black;
+            }
+            .c3{
+                padding: 10px;
+                border: 1px solid green;
+                border-radius: 3px;
+            }
+             .parent:hover .c2{
+                display: block;
+            }
+            
+            .c3:hover{
+                background-color:lightblue;
+                color:yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="c1">MENU</div>
+                <div class="c2">
+                <div class="c3">OPTION-1</div>
+                <div class="c3">OPTION-2</div>
+                <div class="c3">OPTION-3</div>
+            </div>
+        </div>
+    </body>
+</html>

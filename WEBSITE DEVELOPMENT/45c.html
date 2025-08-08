@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Card Flipping</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .grandparent{
+                perspective: 850px;
+            }
+            .parent{
+                width:700px;
+                height:500px;
+                position: relative;
+                transform-style: preserve-3d;
+                /* border:2px solid red; */
+                transition: transform 1s linear;
+            }
+            .parent:hover{
+                transform: rotateY(180deg);
+            }
+            .front{
+                width:700px;
+                height:500px;
+                font-size: 25px;
+                background-color: cornflowerblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position:absolute;
+                top:0px;
+                backface-visibility: hidden;
+            
+            }
+            .back{
+                width:700px;
+                height:500px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(100, 237, 152);
+                position:absolute;
+                top:0px;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+            }
+            .f1{
+                width:100%;
+                height:100%;
+                background-size: cover;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="Grandparent">
+        <div class="parent">
+        <div class="front">
+          FRONT SIDE
+        </div>
+        <div class="back">BACKSIDE</div>
+        </div>
+        </div>
+
+    </body>
+</html>

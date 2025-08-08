@@ -1,0 +1,264 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Poppins;
+}
+
+/* Header Styles */
+.header{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #e0f7da; /* Light Mint Green - Header Background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navigation{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+}
+
+.tags{
+    color: #33691e; /* Deep Olive Green - Navigation Links */
+    text-decoration: none;
+    font-size: large;
+    display: block;
+    padding: 10px 0; /* Add padding for better hover area */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.tags:hover{
+    color: #ffffff; /* White - Text on hover */
+    background-color: #33691e; /* Deep Olive Green - Background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+    padding: 10px 15px; /* Adjust padding for button-like hover */
+    margin: 0 -15px; /* Counteract padding to keep alignment */
+}
+
+.drop{
+    position: relative;
+    z-index: 999;
+}
+
+.dropdown{
+    font-size: 20px;
+    border-radius: 10px;
+    display: none;
+    background-color: #e0f7da; /* Light Mint Green - Dropdown Background */
+    position: absolute;
+    border: 1px solid #c9e6bf; /* Light Mint Green variant border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for dropdown */
+    min-width: 160px; /* Ensure dropdown has a minimum width */
+}
+
+.drop:hover .dropdown{
+    display: block;
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: #33691e; /* Deep Olive Green - Dropdown Links */
+    padding: 10px;
+    display: block; /* Make links block to fill area */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.dropdown a:hover{
+    color: #ffffff; /* White - Dropdown link text on hover */
+    background-color: #33691e; /* Deep Olive Green - Dropdown link background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.profile{
+    color: #ffffff; /* White - Profile Button Text */
+    text-decoration: none;
+    font-family: Poppins; /* Keep Poppins consistent */
+    font-size: large;
+    background-color: #33691e; /* Deep Olive Green - Profile Button Background */
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.profile:hover{
+    color: white; /* White - Profile Button Text on Hover */
+    background-color: #2b561b; /* Slightly Darker Olive Green - Profile Button Background on Hover */
+}
+
+.bars{
+    display: none;
+    color: #33691e; /* Deep Olive Green - Hamburger Icon */
+    font-size: 30px;
+    cursor: pointer; /* Indicate clickable */
+}
+
+.menu_options{
+    position: fixed; /* Use fixed for full viewport height */
+    top:0px;
+    left:-320px;
+    width: 300px;
+    height: 100svh; /* Use svh for more consistent mobile height */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    background-color: #e0f7da; /* Light Mint Green - Mobile Menu Background */
+    transition: left 0.8s ease-in-out; /* Smooth transition */
+    z-index: 1000; /* Ensure it's above other content */
+    padding-top: 20px; /* Add some padding at the top */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2); /* Shadow for slide-out effect */
+}
+
+.menu_options div{
+    border-bottom: 1px solid #c9e6bf; /* Light Mint Green variant - Divider */
+    border-radius: 5px;
+    width: calc(100% - 40px); /* Adjust width for padding */
+    margin-right: 20px; /* Align to the right */
+    padding-bottom: 5px; /* Padding for the line */
+}
+
+.menu_options a:hover{
+    color: #2b561b; /* Slightly Darker Olive Green - Mobile Menu Link Hover */
+}
+
+span{
+    font-size: 50px;
+    cursor: pointer;
+    width: fit-content;
+    color: #33691e; /* Deep Olive Green - Close Button */
+    padding: 0 20px 0 0; /* Padding to move from edge */
+    align-self: flex-end; /* Align close button to the right */
+}
+
+.menu_options a{
+    color: #33691e; /* Deep Olive Green - Mobile Menu Links */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px; /* Padding for mobile links */
+    display: block; /* Make them block for full click area */
+    width: 100%; /* Fill the container width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.drop1{
+    position: relative;
+}
+
+.dropdown1{
+    display: none;
+    background-color: #e0f7da; /* Light Mint Green - Mobile Dropdown Background */
+    position: relative; /* Relative positioning for mobile dropdown */
+    border-bottom: 1px solid #c9e6bf; /* Light Mint Green variant */
+    padding: 10px 0; /* Add padding to dropdown */
+}
+
+.drop1:hover .dropdown1{
+    display: block;
+}
+
+.dropdown1 a{
+    text-decoration: none;
+    color: #33691e; /* Deep Olive Green - Mobile Dropdown Links */
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-left: 40px; /* Indent mobile dropdown items */
+}
+
+.dropdown1 a:hover{
+    color: #2b561b; /* Slightly Darker Olive Green - Mobile Dropdown Link Hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width:320px) and (max-width:920px) {
+    .tags{
+        display: none;
+    }
+    .profile{
+        display: none;
+    }
+    .bars{
+        display: block;
+    }
+}
+
+/* Footer Styles */
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #33691e; /* Deep Olive Green - Footer Background */
+    padding: 30px 0px;
+    gap: 25px;
+    /* transition: transform 1s linear; */ /* Removed this transition, it might cause unexpected behavior */
+    color: white; /* Ensure all direct text in footer is white */
+}
+
+.foot{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   gap: 20px 0px;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 50px;
+}
+
+.com{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px 0px;
+    padding: 0px 20px;
+}
+
+.com11{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px 0px;
+    padding: 0px 15px;
+}
+
+/* Ensure text inside these divs uses white color */
+.com div, .com11 div {
+    color: white;
+}
+
+
+.com1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px 10px ;
+}
+
+.copy{
+    font-size: 16px;
+    text-align: center;
+    font-family: Poppins; /* Consistent font */
+    color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for copyright */
+}
+
+footer a{
+    text-decoration: none; /* Ensure links retain no underline */
+    color: white; /* Default link color in footer */
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+footer a:hover{
+    transform: translateY(-5px);
+    text-shadow: 0px 0px 5px #c9e6bf; /* Light Mint Green variant for text shadow on hover */
+    color: #c9e6bf; /* Light Mint Green variant for link color on hover */
+}

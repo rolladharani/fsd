@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>DOM UPDATION</title>
+        <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            /* position: relative; */
+            padding: 20px;
+            background-color: rgb(59, 211, 211);
+            border:2px solid black;
+        }
+        div button{
+            margin:10px;
+            border:2px solid black;
+        }
+</style>
+    </head>
+    <body>
+        <div>
+            <button onclick="fun()">LEFT</button>
+            <button onclick="fun2()">RIGHT</button>
+            <button onclick="fun3()">TOP</button>
+            <button onclick="fun4()">BOTTOM</button>
+
+        </div>
+        <script>
+            function fun() {
+            document.getElementsByTagName("button")[0].style=" position:relative; left:-20px;"
+            }
+            function fun2()
+            {
+                document.getElementsByTagName("button")[1].style="position:relative; left:20px;"
+            
+            }
+            function fun3()
+            {
+                document.getElementsByTagName("button")[2].style="position:relative; top:-20px;"
+            }
+            function fun4()
+            {
+                document.getElementsByTagName("button")[3].style="position:relative; top:20px;"
+
+            }
+
+        </script>
+    </body>
+</html>

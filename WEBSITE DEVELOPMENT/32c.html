@@ -1,0 +1,184 @@
+<html>
+    <head><title>Header DropDowns Task</title>
+    <style>
+        .parent{
+            width:100%;
+            height:100px;
+            border:1px solid black;
+            box-shadow: 0px 0px 20px grey;
+            position: relative;
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+
+        }
+        .c1{
+            width:100px;
+            height:90px;
+             background-image: url("https://static.vecteezy.com/system/resources/thumbnails/011/997/010/small/shop-marketing-3d-icon-illustration-for-your-website-user-interface-and-presentation-3d-render-illustration-free-png.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            position:absolute;
+            top:20px;
+            left:60px;
+        }
+        .home{
+            font-weight: Bold;
+            color:#f54e77;
+            font-size: 40px;
+            position: absolute;
+            top: 54px;
+            left:380px;
+        }
+        .ho1{
+            font-weight: lighter;
+            display: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            color:plum;
+            padding:5px;
+        }
+        .home:hover .ho1{
+            display:block;
+        }        
+        .ho1:hover{ 
+                background-color:rgb(186, 54, 186);
+                color:yellow;
+        }
+        .about{
+            font-weight: Bold;
+            color:#f54e77;
+            font-size: 40px;
+            position: absolute;
+            top: 54px;
+            left:580px;
+        }
+        .a1{
+            font-weight: lighter;
+            display: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            color:plum;
+            padding:5px;
+        }
+        .about:hover .a1{
+            display:block;
+        }        
+        .a1:hover{ 
+                background-color:rgb(186, 54, 186);
+                color:yellow;
+        }
+         .pro{
+            font-weight: Bold;
+            color:#f54e77;
+            font-size: 40px;
+            position: absolute;
+            top: 54px;
+            left:780px;
+        }
+        .p1{
+            font-weight: lighter;
+            display: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            color:plum;
+            padding:5px;
+        }
+        .pro:hover .p1{
+            display:block;
+        }        
+        .p1:hover{ 
+                background-color:rgb(186, 54, 186);
+                color:yellow;
+        }
+         .ret{
+            font-weight: Bold;
+            color:#f54e77;
+            font-size: 40px;
+            position: absolute;
+            top: 54px;
+            left:980px;
+        }
+        .r1{
+            font-weight: lighter;
+            display: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            color:plum;
+            padding:5px;
+        }
+        .ret:hover .r1{
+            display:block;
+        }        
+        .r1:hover{ 
+                background-color:rgb(186, 54, 186);
+                color:yellow;
+        }
+        .custom-user{
+
+            position: absolute;
+            left:1300px;
+            top:30px;
+            border:1px solid transparent;
+            border-radius: 50%;
+            color:purple;
+            font-size: 60px;
+        }
+        .cc1{
+            font-weight: lighter;
+            display: none;
+            border: 1px solid black;
+            border-radius: 5px;
+            color:plum;
+            padding:5px;
+            font-size:25px;
+        }
+        .custom-user:hover .cc1{
+            display:block;
+        }        
+        .cc1:hover{ 
+                background-color:rgb(186, 54, 186);
+                color:yellow;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    </head>
+    <body>
+        <div class="parent">
+            <div class="c1"></div>
+            <div class="home">Home
+                <div class="ho1">option1</div>
+                <div class="ho1">option2</div>
+                <div class="ho1">option3</div>
+                <div class="ho1">option4</div>
+            </div>
+            <div class="about">About
+                <div class="a1">option1</div>
+                <div class="a1">option2</div>
+                <div class="a1">option3</div>
+            </div>
+            <div class="pro">Products
+                <div class="p1">option1</div>
+                <div class="p1">option2</div>
+                <div class="p1">option3</div>
+            </div>
+            <div class="ret">Retail
+                <div class="r1">option1</div>
+                <div class="r1">option2</div>
+            </div>
+            <div class="custom-user"><i class="fa-solid fa-user"></i>
+                <div class="cc1">Log Out</div>
+                <div class="cc1">Reset Password</div>
+                <div class="cc1">Edit Profile</div>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>

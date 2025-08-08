@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Figma Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px 0 20px;
+      font-size: 20px;
+      box-shadow: 0px 0px 20px 3px #f1f5ff;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      font-size: 22px;
+    }
+
+    .menu div {
+      padding: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .menu div:hover {
+      background-color: rgb(255, 170, 0);
+    }
+
+    .main1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 50px 20px;
+    }
+
+    .m11 {
+      max-width: 600px;
+      flex: 1;
+    }
+
+    .m12 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      padding-top: 50px;
+      line-height: 1.2;
+    }
+
+    .m13 {
+      color: rgb(255, 170, 0);
+    }
+
+    .m14 {
+      padding-top: 30px;
+      color: grey;
+      line-height: 1.6;
+      font-size: 1.3rem;
+      max-width: 750px;
+    }
+
+    .m15 {
+      margin: 50px 0;
+      font-size: 1.2rem;
+      text-align: center;
+      border-radius: 4px;
+      padding: 15px;
+      width: fit-content;
+      background-color: rgb(255, 170, 0);
+      cursor: pointer;
+    }
+
+    .m21 {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .m21 img {
+      width: 100%;
+      height: auto;
+      padding-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .main1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .m21 img {
+        padding-top: 20px;
+      }
+
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="./JourneyLens_Files/Logo.png" alt="Logo">
+    </div>
+    <div class="menu">
+      <div class="Home">Home</div>
+      <div class="Skills">Skills</div>
+      <div class="Education">Education</div>
+      <div class="Projects">Projects</div>
+      <div class="Recommendations">Recommendations</div>
+      <div class="Contact">Contact</div>
+    </div>
+  </div>
+
+  <div class="main1">
+    <div class="m11">
+      <h1 class="m12">I'm Rolla Dharani <span class="m13">Front-end</span> <span>Developer</span></h1>
+      <div class="m14">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Et, Volutpat Feugiat Placerat Lobortis. Natoque Rutrum Semper Sed Suspendisse Nunc Lectus.</div>
+      <div class="m15">Hire Me <i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    <div class="m21">
+      <img src="./JourneyLens_Files/Girl.jpeg" alt="Profile Image">
+    </div>
+  </div>
+</body>
+</html>
+ .main1{
+                height:auto;
+                width:auto;
+                display: flex;
+                justify-content: space-around;
+            }
+            .m11{
+                width:auto;
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center;
+                align-items: center; */
+            }
+            .m12{
+                 font-size: 60px;
+                font-family: sans-serif;
+                max-width:600px;
+                padding-top: 150px;
+                
+            }
+            .m13{
+                color:rgb(255, 170, 0);
+            }
+            .m14{
+                padding-top: 30px;
+                color:grey;
+                line-height: 30px;
+                max-width: 750px;
+                 font-size: 23px;
+            }
+            .m15{
+                margin-top: 130px;
+                margin-bottom: 80px;
+                font-size: 23px;
+                width:120px;
+                /* height:px; */
+                text-align: center;
+                border-radius: 4px;
+                padding: 15px;
+                background-color:rgb(255, 170, 0);
+            }
+            .m21{
+                width:auto;
+                /* border:1px solid black; */
+            }
+            .m21 img{
+                width: auto;
+                height:auto;
+                background-size: 100% 100%;
+                background-position: cover;
+                padding-top: 135px;
+            }

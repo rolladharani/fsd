@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apiculture Feeding</title>
+    <style>
+        body {
+            font-family: Poppins;
+            margin: 0;
+            padding: 0;
+            background: #fff4cc; /* Changed from #fff4e6 */
+            color: #f57f17; /* Changed from #8c6e54 */
+        }
+
+        .feed1 {
+            margin-top: 80px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 40px;
+        }
+
+        .tex1, .tex4, .tex5, .tex6, .tex7, .tex8 {
+            color: #f57f17; /* Changed from #8c6e54 */
+        }
+
+        .tex2 {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .tex3 {
+            font-size: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-left: 10px solid #f57f17; /* Changed from #8c6e54 */
+            border-radius: 10px;
+            line-height: 1.5;
+        }
+
+        .one{
+            animation: myani2 1s ease;
+            margin-bottom: 50px;
+        }
+        @keyframes myani2 {
+            from { opacity: 0; transform: translatex(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .card {
+            font-size: 18px;
+            border: 2px solid #f57f17; /* Changed from #8c6e54 */
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transform: translateY(0px);
+            transition: transform 0.5s ease;
+            margin-bottom: 30px;
+            animation: myani 1s ease;
+            
+        }
+        .card h4{
+            font-size: 23px;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+        }
+
+        .tabb {
+            margin-top: 40px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabb th, .tabb td {
+            border: 2px solid #f57f17; /* Changed from #8c6e54 */
+            padding: 15px;
+        }
+        .tabb tr:hover {
+            box-shadow: 0 10px 20px rgba(245, 127, 23, 0.4); /* Adjusted rgba for new color */
+        }
+
+        .tabb th {
+            /* background-color: #fff; */
+            color: #f57f17; /* Changed from #8c6e54 */
+            text-align: left;
+        }
+        .media{
+            border-radius: 10px;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            box-shadow:0 20px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .v1 {
+            font-weight: 600;
+            font-size: 40px;
+            margin-top: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+        
+        }
+
+        .v2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .media iframe{
+            border-radius: 10px;
+        }
+        .form-div {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+            background: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 3px solid #f57f17; /* Changed from #8c6e54 */
+        }
+
+        .form-div form {
+            max-width: 500px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-div input, .form-div select, .form-div textarea {
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #f57f17; /* Changed from #8c6e54 */
+            border-radius: 8px;
+        }
+
+        .form-div button {
+            background-color: #f57f17; /* Changed from #8c6e54 */
+            color: white;
+            padding: 14px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .form-div button:hover {
+            background-color: #e65100; /* Adjusted from #6b523f (a darker orange for hover) */
+        }
+
+        .tip {
+            font-size: 18px;
+            background-color: #fff;
+            padding: 20px;
+            border-left: 6px solid #f57f17; /* Changed from #8c6e54 */
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .tip:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .part1 {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #fff;
+            animation: slideDown 4s ease-out forwards;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .part11, .part12 {
+            flex: 1 1 500px;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        .part11 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            font-weight: bolder;
+            font-size: 40px;
+            line-height: 1.5;
+        }
+
+        .part12 {
+            height: 500px;
+        }
+
+        .part12 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .nutrition-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .nutrition-table {
+            display: grid;
+            font-size: 18px;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            max-width: 900px;
+            margin-bottom: 50px;
+        }
+
+        .nutri1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: #fff;
+            padding: 20px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(245, 127, 23, 0.1); /* Adjusted rgba for new color */
+            transition: transform 0.3s;
+        }
+
+        .nutri1:hover {
+            transform: translateY(-4px);
+        }
+
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 2rem;
+            animation: myani 1s ease;
+        }
+
+        .hero img {
+            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            margin-bottom: 2rem;
+            font-size: 20px;
+        }
+
+        .hero button {
+            background-color: #f57f17; /* Changed from #8c6e54 */
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 1s;
+            font-size: 1rem;
+        }
+
+        .hero button:hover {
+            background-color: #e65100; /* Adjusted from #6b523f */
+        }
+
+        @keyframes myani {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-text">
+            <h2 style="font-size: 50px;">APICULTURE FEEDING</h2>
+            <p>Feeding keeps bee colonies healthy and productive when nature falls short, supporting hive strength, brood growth, and steady honey flow.</p>
+            <button onclick="scrolltosection()">Get Started</button>
+        </div>
+        <img src="./Assets/FeedBanner2.jpg" alt="Feeding Banner">
+    </section>
+
+    <div class="feed1">
+        <div class="one">
+            <h1 class="tex1">🍯 Bee Feeding Essentials</h1>
+            <p class="tex2">Feeding isn’t just support — it’s survival. Keep your hive healthy during lean seasons.</p>
+            <p class="tex3">Feeding honeybees is crucial during seasons when natural food sources are low. A well-fed colony remains active, healthy, and productive year-round. Choosing the right feed and method ensures bees receive essential nutrition.</p>
+        </div>
+        <div id="targetSec">
+            <h1 class="tex4">🥣 Feeding Options for Bees</h1>
+            <div class="gallery">
+                <div class="card"><h4>🍬 Sugar Syrup</h4><p>Used in 1:1 or 2:1 ratio based on season. Provides instant energy during low nectar periods.</p></div>
+                <div class="card"><h4>🥩 Protein Patties</h4><p>Great for brood development. Use during early spring or pollen shortage.</p></div>
+                <div class="card"><h4>🌾 Pollen Substitutes</h4><p>Supplement when real pollen is unavailable. Helps with colony strength.</p></div>
+                <div class="card"><h4>💧 Water Supply</h4><p>Clean water should always be available near the hive to maintain hydration.</p></div>
+            </div>
+
+            <h1 class="tex5">📆 Seasonal Feeding Guide</h1>
+            <table class="tabb">
+                <tr><th>Season</th><th>Recommended Feeding</th></tr>
+                <tr><td>🌸 Spring</td><td>1:1 Sugar Syrup + Protein Patties</td></tr>
+                <tr><td>☀️ Summer</td><td>Monitor nectar flow, minimal feeding</td></tr>
+                <tr><td>🌧️ Monsoon</td><td>Dry sugar or patties, avoid moisture</td></tr>
+                <tr><td>❄️ Winter</td><td>2:1 Sugar Syrup or Dry Sugar Boards</td></tr>
+            </table>
+            <div class="media">
+                <div class="v1">🎥 How to Feed Bees - Demo Video</div>
+                <div class="v2">
+                    <iframe width="700" height="400" src="https://www.youtube.com/embed/v_2Ot54jMus?si=lFPHr5a8dZGytKmd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <h1 class="tex6" style="margin-top: 60px; text-align: center;">📋 Feed Activity Log</h1>
+            <div class="form-div">
+                <form>
+                    <select>
+                        <option>Select Feed Type</option>
+                        <option>Sugar Syrup</option>
+                        <option>Protein Patty</option>
+                        <option>Pollen Substitute</option>
+                        <option>Water</option>
+                    </select>
+                    <input type="date" placeholder="Feeding Date" />
+                    <input type="text" placeholder="Quantity (e.g. 300ml, 2 patties)" />
+                    <textarea placeholder="Additional Notes"></textarea>
+                    <button type="submit" onclick="fun()">Log Feeding</button>
+                </form>
+            </div>
+
+            <div class="nutrition-section">
+                <h1 class="tex8">🍯 What's in the Feed?</h1>
+                <p class="tex9">Understand the nutrients your bees need for energy, immunity, and hive development.</p>
+                <div class="nutrition-table">
+                    <div class="nutri1" style="font-weight: bold; background-color: #fff0c2;">
+                        <div>Feed Type</div>
+                        <div>Key Nutrients</div>
+                        <div>Benefits</div>
+                    </div>
+                    <div class="nutri1"><div>🍶 Sugar Syrup</div><div>Carbohydrates</div><div>Provides energy for flying</div></div>
+                    <div class="nutri1"><div>🍘 Protein Patties</div><div>Protein, Amino Acids</div><div>Boosts brood production</div></div>
+                    <div class="nutri1"><div>🌾 Pollen Substitutes</div><div>Vitamins & Minerals</div><div>Improves immunity</div></div>
+                    <div class="nutri1"><div>💧 Water</div><div>Hydration</div><div>Helps in digestion & cooling</div></div>
+                </div>
+            </div>
+
+            <h1 class="tex7">💡 Helpful Feeding Tips</h1>
+            <div class="tip">✅ Use fresh sugar syrup — never fermented.</div>
+            <div class="tip">✅ Clean feeding tools and trays after each use.</div>
+            <div class="tip">✅ Don’t overfeed. Observe hive behavior.</div>
+            <div class="tip">✅ Place feeders away from ants or wasp paths.</div>
+            <div class="tip">✅ Avoid feeding during natural nectar flow.</div>
+        </div>
+    </div>
+    <script>
+        function fun() {
+            window.alert("✅ Feeding activity has been logged successfully. Keep your hive healthy! 🐝");
+        }
+        function scrolltosection() {
+            const section = document.getElementById("targetSec");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+</html>

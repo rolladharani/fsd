@@ -1,0 +1,648 @@
+<html>
+    <head>
+        <title>TASK1</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            .banner{
+                width:100%;
+                height:auto;
+                background-color: #38125d;
+            }
+            .banner_header{
+                height:50px;
+                /* border:1px solid black; */
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                /* gap:60rem; */
+            }
+            .bh_one{
+                color: rgba(255, 255, 255, 0.8);
+                font-weight:bold;
+                font-size: 30px;
+                font-family: Comfortaa, sans-serif;
+                padding: 0.7rem;
+                padding-left: 10rem;
+            }
+            .bh_two{
+                color:white;
+                font-size: 30px;
+                display: flex;
+                justify-content: flex-end;
+                padding: 0.7rem;
+               gap:3rem;
+               padding-right: 5rem;
+            }
+            .banner_onetwo{
+                height: auto;
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                /* margin-top: 30px; */
+                gap:2rem;
+                 padding: 5rem;
+            }
+            .banner_one{
+                width:50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+                /* border: 1px solid black; */
+                text-align: justify;
+                max-width: 300px;
+
+            }
+            .banner_two{
+                width:auto;
+                height:auto;
+            /* border:2px solid black; */
+            
+            }
+            .banner_two img {
+    width: 100%;
+    /* max-width: 300px; */
+    height: auto;
+    object-fit: contain;
+}
+            .bo1{
+                color:white;
+                font-size: 40px;
+                font-weight: bolder;
+                font-family: sans-serif;
+            }
+            .bo2{
+                color:white;
+              line-height: 25px;
+              word-spacing: 2px;
+              font-family: sans-serif;
+            }
+            .bo3{
+                padding-top: 1rem;
+                color: white;
+              line-height: 25px;
+              word-spacing: 2px;
+              font-family: sans-serif;
+            }
+            .bo33{
+                text-decoration: underline;
+            }
+            .bo4{
+                margin-top: 1rem;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                width: 180px;
+                height: 40px;
+                text-align: center;
+                border-radius: 50px;
+                background-color: rgb(70, 183, 227);
+                color:white;
+                letter-spacing: 2px;
+                font-size: 13px;
+                font-weight:bolder;
+                font-family:sans-serif;
+            }
+            .keyfeatures{
+                /* border:2px solid black; */
+                margin-top:3rem;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+            }
+            .kf1{
+                font-size: 35px;
+                font-weight: 600;
+                font-family:sans-serif; 
+            }
+            .kf2{
+                padding-top: 1rem;
+            }
+            .kf34{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                /* padding: 2rem; */
+                gap:0.5em
+                /* border: 2px solid blue; */
+            }
+            .kf3{
+                /* width:48%; */
+                padding-top: 1.5rem;
+                /* border: 2px solid cornflowerblue; */
+            }
+            .kf3 img{
+                width:100%;
+                max-height: 480px;
+                height: auto;
+                object-fit: contain;  
+                padding: 1rem;    
+            }
+            .kf4{
+                /* margin-top: 1rem; */
+                /* border: 2px solid cornflowerblue; */
+                display: flex;
+                flex-wrap: wrap;
+                gap:.8rem;
+                width: 40%;
+                max-height: auto;
+                padding-top: 1.2rem;
+            }
+            .kf41{
+                height: 200px;
+                width: 200px;
+                background-color:rgb(32, 163, 215);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .kf41 i{
+                font-size: 2rem;
+              margin-bottom: 1rem;
+                  color:white;
+            }
+            .kf41 p{
+                color: white;
+                font-size: 15px;
+                font-family: Comfortaa,sans-serif;
+            }
+            .kf42{
+                height: 200px;
+                width: 200px;
+                background-color: rgb(135, 143, 250);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .kf42 i{
+                font-size: 2rem;
+              margin-bottom: 1rem;
+                  color:white;
+            }
+            .kf42 p{
+                color: white;
+                font-size: 15px;
+                font-family: Comfortaa,sans-serif;
+            }
+            .kf43{
+                height: 200px;
+                width: 200px;
+                background-color: rgb(58, 58, 212);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .kf43 i{
+                font-size: 2rem;
+              margin-bottom: 1rem;
+                  color:white;
+            }
+            .kf43 p{
+                color: white;
+                font-size: 15px;
+                font-family: Comfortaa,sans-serif;
+            }
+            .kf44{
+                height: 200px;
+                width: 200px;
+                background-color: rgb(203, 82, 239);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .kf44 i{
+                font-size: 2rem;
+            margin-bottom: 1rem;
+            color:white;
+            }
+            .kf44 p{
+                color: white;
+                font-size: 15px;
+                font-family: Comfortaa,sans-serif;
+            }
+            @media (max-width: 768px) {
+                .kf3, .kf4 {
+                display: flex;
+                flex-direction: column;
+                }
+            }
+                .part3{
+                    height:auto;
+                    background-color: #38125d;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap:10px;
+
+
+                }
+                .p31{
+                    width:600px;
+                    height:450px;
+                    /* border:2px solid black; */
+                    /* margin-top: 5rem; */
+                }
+                .p31 p{
+                    color:white;
+                    font-size: 40px;
+                    font-weight: bolder;
+                    font-family: sans-serif;
+                }
+                .p31 img{
+                    /* height: 100%;  FOR EACH IMG CLASS*/   
+                    padding-top: 1rem;
+                    height: calc(100% - 50px);
+                    width: auto;
+                    object-fit: contain;
+                }
+                .p32{
+                    width:400px;
+                    height:auto;
+                    /* border:2px solid black; */
+                    padding-left: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    /* margin-bottom: 5rem; */
+                }
+                .b23{
+                    color:white;
+                    padding-top: 2rem;
+                    font-weight: bolder;
+                    letter-spacing: 1.5px;
+                    font-family:Montserrat,sans-serif;
+                }
+                .b24{
+                    color: white;
+                    padding-top: 1rem;
+                    max-width:250px;
+                    padding-left: 3rem;
+                    line-height: 23px;
+                    font-family: sans-serif;
+                    font-size: 13px;
+                }
+                .b25{
+                    text-decoration: underline;
+                    letter-spacing: 3px;
+                    padding-top: 1rem;
+                    color: white;
+                    font-family:Comfortaa,sans-serif;
+                    font-size: 13px;
+                    padding-left: 3rem;
+                }
+                .p3up,.p3down{
+                    background-color: #38125d;
+                    width: 100%;
+                    height:80px;
+                }
+                .part4{
+                    height:auto;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+                .p41{
+                    width:400px;
+                    height: 500px;
+                    /* border: 2px solid black; */
+                    padding-left: 5rem;
+                    padding-top: 4rem;
+                }
+                 .p42{
+                    width:800px;
+                    height: 500px;
+                    /* border: 2px solid black; */
+                }
+                .pic{
+                    /* height: 100%;  FOR EACH IMG CLASS*/   
+                    /* padding-top: 1rem; */
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+                .p4up,.p4down{
+                    background-color: #ffffff;
+                    width: 100%;
+                    height:80px;
+                }
+                .p5{
+                    height:auto;
+                    background-color: #38125d;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .p51{
+                height:600px;
+                /* border:2px solid black; */
+                display: flex;
+                }
+                .p5pic{
+                    width: 100%;
+                    object-fit: contain;
+                    position: relative;
+                  
+                }
+                .p52{
+                    width: 400px;
+                    height: 300px;
+                    position: absolute;
+                    transform: translate(300px,200px);
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
+                    gap:5px;
+                }
+                .box{
+                        background: white;
+                        padding: 1rem;
+                        width: 180px;
+                        height:180px;
+                        text-align: center;
+                        font-family: sans-serif;
+                        font-size: 13px;
+                        margin-top: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        gap:15px;
+
+                }
+                .box i{
+                    width:50px;
+                    height:50px;
+                    background-color: #00bfff;
+                    border-radius: 50%;
+                    border:2px solid transparent;
+                    padding-top: 10px;
+                }
+                .p5up,.p5down{
+                    background-color: #38125d;
+                    width: 100%;
+                    height:150px;
+                }
+                .part6{
+                    height:auto;
+                    /* background-color: #00bfff; */
+                    display: flex;
+                     justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                }
+                .p61{
+                    width:600px;
+                    height: 500px;
+                    /* border: 2px solid black; */
+
+                }
+                .p62{
+                    width:400px;
+                    height: 500px;
+                    /* border: 2px solid black; */
+                    padding-top: 7rem;
+                    padding-left: 3rem;
+
+                }
+                 .pic2{
+                    /* height: 100%;  FOR EACH IMG CLASS*/   
+                    /* padding-top: 1rem; */
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+                .p7{
+                    height:800px;
+                    background-color: #38125d;
+                }
+                .p71{
+                    width:600px;
+                    height:600px;
+                    display: flex;
+                       margin-left: auto;
+                       margin-right: auto;
+
+                }
+                .p7pic{
+                    width: 100%;
+                    object-fit: contain;
+                    position: relative;
+                  
+                }
+                .p72{
+                    width: 400px;
+                    height: 300px;
+                    position: absolute;
+                    transform: translate(250px , -150px);
+                    /* margin-left: 300px; */
+                    margin-bottom: 400px;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr;
+                    gap:5px;
+                }
+                .box2{
+                        background: white;
+                        padding: 1rem;
+                        width: 300px;
+                        height:300px;
+                        text-align: center;
+                        font-family: sans-serif;
+                        font-size: 13px;
+                        margin-top: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        gap:15px;
+
+                }
+                .p8{
+                    height:700px;
+                    border: 2px solid black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .p81{
+                    width: 500px;
+                    height: 500px;
+                    border: 2px solid black;
+                }
+                .p82{
+                    width: 500px;
+                    height: 500px;
+                    border: 2px solid black;
+                }
+
+
+
+        </style>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        
+<body>
+            <div class="banner">
+            <div class="banner_header">
+                <div class="bh_one">logo</div>
+            <div class="bh_two"><i class="fa-solid fa-bars"></i></div>
+            </div>
+            <div class="banner_onetwo">
+            <div class="banner_one">
+                <div class="bo1">Web Software <br> Developers</div><br>
+                <div class="bo2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</div>
+                <div class="bo3">Image from 
+                    <span class="bo33">Freepik</span>
+                </div>
+                <div class="bo4">READ MORE</div>
+            </div>
+            <div class="banner_two">
+                <img src="./JourneyLens_Files/T1_first.png">
+            </div>
+            </div>
+            </div>
+        <div class="keyfeatures">
+            <div class="kf1">Key Features</div>
+        <div class="kf2">Sample text. Click to select the text box. Click again or double click to start editing the text.</div>
+        <div class="kf34">
+            <div class="kf3"><img src="./JourneyLens_Files/T1_second.png"></div>
+            <div class="kf4">
+                    <div class="kf41">
+                            <i class="fa-solid fa-code"></i>
+                        <p>Development</p>
+                    </div>
+                    <div class="kf42">
+                        <i class="fa-solid fa-briefcase"></i>
+                    <p>Top Skills</p>
+                    </div>
+                    <div class="kf43">
+                        <i class="fa-solid fa-shapes"></i>
+                    <p>Design</p>
+                    </div>
+                    <div class="kf44">
+                        <i class="fa-solid fa-display"></i>
+                        <p>Responsive</p>
+                    </div>
+                </div>
+    </div></div>
+    <div class="part3">
+        <div class="p3up"></div>
+        <div class="p31">
+            <p>Data Visualization</p>
+            <img src="./JourneyLens_Files/trail-2.jpg">
+
+        </div>
+        <div class="p32">
+    <div class="b23">01. GOALS</div>
+    <div class="b24">Sample text. Click to select the text box.Click again or double click to start editing the text.</div>
+    <div class="b25">MORE</div>
+    <div class="b23" style="padding-top: 5rem;">02. STRATEGY</div>
+    <div class="b24">Sample text. Click to select the text box.Click again or double click to start editing the text.</div>
+    <div class="b25">MORE</div>
+        </div>
+        <div class="p3down"></div>
+    </div>
+    <div class="part4">
+        <div class="p4up"></div>
+        <div class="p41">
+            <div class="bo1" style="color:skyblue;">IT Solutions</div><br>
+            <div class="bo2" style="color:black; max-width: 200px; padding-left: 0rem;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</div>
+            <div class="bo3" style="color:black">Image from 
+                <span class="bo33" style="color:skyblue"">Freepik</span>
+            </div>
+            <div class="bo4">LEARN MORE</div>
+        </div>
+        <div class="p42">
+            <img class="pic" src="./JourneyLens_Files/trail-3.jpg">
+        </div>
+        <div class="p4down"></div>
+    </div>
+     <div class="p5up"></div>
+    <div class="p5">
+        <div class="p51">
+            <img clas="p5pic"src="./JourneyLens_Files/trail-4.jpg" height="600px"></div>
+            <div class="p52">
+                <div class="box">
+                    <i class="fa-solid fa-lightbulb fa-2x" style="color: #fff;"></i>
+                    <p>DEVELOPMENT</p>
+                    </div>
+                <div class="box">
+            <i class="fa-solid fa-wifi fa-2x" style="color: #fff;"></i>
+            <p>5G NETWORK</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-brain fa-2x" style="color: #fff;"></i>
+                    <p>AI PRODUCTS</p>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-microchip fa-2x" style="color: #fff;"></i>
+                    <p>AUTOMATION</p>   </div>
+            </div>
+            </div>
+        <div class="p5down"></div>
+        <div class="part6">
+        <!-- <div class="p6up"></div> -->
+        <div class="P61">
+            <img class="pic2" src="./JourneyLens_Files/trail-5.jpg">
+        </div>
+        <div class="p62">
+            <div class="bo1" style="color:skyblue;">IT Solutions</div><br>
+            <div class="bo2" style="color:black; max-width: 200px; padding-left: 0rem;">We collaborate with you to create new value through digital transformation. We have hundreds of specialists at your service.</div>
+            <div class="bo3" style="color:black">Image from 
+                <span class="bo33" style="color:skyblue"">Freepik</span>
+            </div>
+            <div class="bo4">LEARN MORE</div>
+        </div>
+        <div class="p4down"></div>
+    </div>
+    <div class="p7">
+<div class="p71">
+    <img class=".p7pic" src="./JourneyLens_Files/trail-6.jpg" height="600px">
+</div>
+<div class="p72">
+    <div class="box2">
+          <div class="bo1" style="color:#38125d; font-size: 30px;">Web Analytics</div>
+            <div class="bo2" style="color:black; max-width: 200px; padding-left: 0rem; line-height:15px;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</div>
+            <div class="bo3" style="color:black; padding-top: 0.5rem; padding-bottom: 0.5rem;">Image from 
+                <span class="bo33" style="color:skyblue;"">Freepik</span>
+            </div>
+            <div class="bo4">READ MORE</div>
+    </div>
+</div>
+    </div>
+    <div class="p8">
+        <div class="p81">We are directly involved in the process</div>
+        <div class="p82">
+            <div class="p83">Nibh tortor id aliquet lectus. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. In hac habitasse platea dictumst quisque.</div>
+            <div class="p84">Non quam lacus suspendisse faucibus interdum. Tempor nec feugiat nisl pretium. Mi in nulla posuere sollicitudin aliquam ultrices. Quisque egestas diam in arcu cursus euismod quis. Libero volutpat sed cras ornare arcu dui vivamus arcu.</div>        
+            <div class="p85">LEARN MORE</div>
+        </div>
+    </div>
+
+    </body>
+</html>

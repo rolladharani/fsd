@@ -1,0 +1,519 @@
+<html>
+    <head>
+        <title>Man</title>
+        <style>
+            .f1{
+                width:60px;
+                height:60px;
+                background-color: bisque;
+                border:1px solid black;
+                border-radius: 30px;
+                position: relative;
+                top:50px;
+            }
+            .eyes1{
+                width:10px;
+                height:10px;
+                border:1px solid black;
+                border-radius: 15px;
+                background-color: white;
+                position: absolute;
+                top:20px;
+                left:9px;
+            }
+            .eb1{
+                width: 5px;
+                height:5px;
+                border-radius: 10px;
+                background-color: black;
+                position: relative;
+                top:6px;
+                left:0.5px;
+            }
+            .eyes2{
+                width:10px;
+                height:10px;
+                border:1px solid black;
+                background-color: white;
+                border-radius: 15px;
+                position: absolute;
+                top:20px;
+                left:36px;
+            }
+            .eb2{
+                width: 5px;
+                height:5px;
+                border-radius: 10px;
+                background-color: black;
+                position: relative;
+                top:6px;
+                left:0.5px;
+            }
+            .nose{
+                width:2px;
+                height:8px;
+                border:1px solid black;
+                border-radius:4px;
+                position:relative;
+                left:-1px;
+                top:-1px;
+            }
+            .mouth{
+                width:12px;
+                height: 6px;
+                border:1px solid black;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: rgb(225, 88, 88);
+                position:absolute;
+                top:12px;
+                left:-6px;
+            }
+
+            .h1{
+                width: 60px;
+                height:30px;
+                background-color: black;
+                border-top-left-radius: 30px;
+                border-top-right-radius:30px;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                position: relative;
+                top:-12px;
+            }
+            .neck{
+                width: 15px;
+                height:15px;
+                border:1px solid black;
+                background-color: bisque;
+                position: relative;
+                top:49px;
+            }
+            .bodyy{
+                width:55px;
+                height:70px;
+                border:1px solid black;
+                background-color:rgb(89, 160, 219);
+                /* border-top-left-radius:10px;
+                border-top-right-radius:10px; */
+                position: relative;
+                top:48px;
+            }
+            .p1{
+                width:0px;
+                height:68px;
+                border:1px solid black;
+            }
+            .p11{
+                width:3px;
+                height: 3px;
+                border:1px solid white;
+                border-radius: 10px;
+                position: absolute;
+                left:30px;
+                top:4px;
+                background-color: black;
+            }
+             .p12{
+                width:3px;
+                height: 3px;
+                border:1px solid white;
+                border-radius: 10px;
+                position: absolute;
+                left:30px;
+                top:16px;
+                background-color: black;
+            }
+             .p13{
+                width: 3px;
+                height: 3px;
+                border:1px solid white;
+                border-radius: 10px;
+                position: absolute;
+                left:30px;
+                top:28px;
+                background-color: black;
+            }
+            .p2{
+                width:55px;
+                height:3px;
+                border:1px solid black;
+                /* border-radius: 2px; */
+                position: absolute;
+                top:38px;
+                left:-1px;
+                background-color: rgb(159, 45, 45);
+            }
+            .p21{
+                width:0px;
+                height:2px;
+                border:1px solid black;
+                position: absolute;
+                left:6px;
+            }
+             .p22{
+                width:0px;
+                height:2px;
+                border:1px solid black;
+                position: absolute;
+                left:20px;
+            }
+            .p23{
+                width:0px;
+                height:2px;
+                border:1px solid black;
+                position: absolute;
+                left:35px;
+            }
+            .p24{
+                width:0px;
+                height:2px;
+                border:1px solid black;
+                position: absolute;
+                left:50px;
+            }
+            .pocket{
+                width:10px;
+                height:10px;
+                border:1px solid black;
+                position: absolute;
+                top:10px;
+                left:39px;
+            }
+            .pi{
+                width:9px;
+                height: 3px;
+                border:1px solid black;
+            }
+            .pant1{
+                width:26px;
+                height:25px;
+                border:1px solid transparent;
+                background-color: rgb(152, 141, 141);
+                position: relative;
+                top:4px;
+                left:-14px;
+            }
+              .pant2{
+                width:26px;
+                height:26px;
+                border:1px solid transparent;
+                background-color: rgb(152, 141, 141);
+                position: relative;
+                top:-23px;
+                left:14px;
+            }
+            .hand1{
+                width:50px;
+                height:10px;
+                border:1px solid black;
+                position: relative;
+                /* border-bottom-right-radius:2px; */
+                top:-70px;
+                left:-53px;
+                border-right: 0px;
+                background-color: bisque;
+            }
+            .h11{
+                width:15px;
+                height:11px;
+                border:1px solid black;
+                position:absolute;
+                border-radius: 2px;
+                top:-1px;
+                left:33px;
+                background-color:rgb(89, 160, 219);
+            }
+            .h12{
+                width:10px;
+                height:10px;
+                border:1px solid  black;
+                position: absolute;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                top:-1px;
+              left:-0px;
+              border-left:0px
+            }
+            .fi1{
+                width:3px;
+                height:4px;
+                border:1px solid black;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                position: absolute;
+                top:-6px;
+                border-bottom: 0px;    
+            }
+            .fi2{
+                width:5px;
+                height:1px;
+                border:1px solid black;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                position: absolute;
+                top:0px;
+                left:-6px;
+                border-right:0px;
+            }
+            .fi3{
+                 width:8px;
+                height:2px;
+                border:1px solid black;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                position: absolute;
+                top:2px;
+                left:-9px;
+                border-right:0px;
+            }
+            .fi4{
+                width:5px;
+                height:1px;
+                border:1px solid black;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                position: absolute;
+                top:5px;
+                left:-6px;
+                border-right:0px;
+            }
+            .fi5{
+                 width:3px;
+                height:1px;
+                border:1px solid black;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                position: absolute;
+                 top:8px;
+                left:-4px;
+                border-right:0px;              
+            }
+             .hand2{
+                width:50px;
+                height:10px;
+                border:1px solid black;
+                position: relative;
+                /* border-bottom-right-radius:2px; */
+                top:-82px;
+                left:53px;
+                /* border-right: 0px; */
+                background-color: bisque;
+            }
+            .h21{
+                width:15px;
+                height:11px;
+                border:1px solid black;
+                position:absolute;
+                border-radius: 2px;
+                top:-1px;
+                left:-1px;
+                background-color:rgb(89, 160, 219);
+            }
+             .h22{
+                width:10px;
+                height:10px;
+                border:1px solid black;
+                position: absolute;
+                border-bottom-left-radius: 4px;
+                border-top-left-radius: 4px;
+                top:-1px;
+                left:38px;
+                border-right:0px
+            }
+            .fi11{
+                width:3px;
+                height:4px;
+                border:1px solid black;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                position: absolute;
+                top:-5px;
+                left:6px;
+                border-bottom: 0px;    
+            }
+            .fi22{
+                width:5px;
+                height:1px;
+                border:1px solid black;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                position: absolute;
+                top:0px;
+                left:11px;
+                border-left:0px;
+            }
+            .fi33{
+                 width:8px;
+                height:2px;
+                border:1px solid black;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                position: absolute;
+                top:2px;
+                left:12px;
+                border-left:0px;
+            }
+            .fi44{
+                width:5px;
+                height:2px;
+                border:1px solid black;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                position: absolute;
+                top:5px;
+                left:12px;
+                border-left:0px;
+            }
+            .fi55{
+                 width:3px;
+                height:1px;
+                border:1px solid black;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                position: absolute;
+                top:8px;
+                left:12px;
+                border-left:0px;              
+            }
+            .leg1{
+                width:13px;
+                height:50px;
+                border:1px  solid black;
+                background-color: bisque;
+                position: absolute;
+                top:70px;
+                left:5px;
+            }
+            .sock1{
+                width:13px;
+                height:20px;
+                border:1px  solid black;
+                background-color: white;
+                position: absolute;
+                top:30px;
+                left:0px;
+                border-right:0px;
+                border-left:0px;
+            }
+            .sock11{
+                width:13px;
+                height:3px;
+                border:1px  solid black;
+                background-color: white;
+                position: absolute;
+                top:30px;
+                left:0px;
+                border-right:0px;
+                border-left:0px;
+            }
+            .shoe1{
+                width:18px;
+                height:10px;
+                border:1px solid black;
+                background-color: black;
+                border-radius: 2px;
+                position: absolute;
+                top:45px;
+                left:-3px;
+            }
+            .leg2{
+                width:13px;
+                height:50px;
+                border:1px  solid black;
+                background-color: bisque;
+                position: absolute;
+                top:70px;
+                left:36px;
+            }
+            .ear1{
+                width:5px;
+                height:8px;
+                border:1px solid black;
+                border-top-left-radius:5px;
+                 border-bottom-left-radius:5px;
+                border-right:0px;
+                position:absolute;
+                top:-6px;
+                left:-34px;
+            }
+            .ear2{
+                width:5px;
+                height:8px;
+                border:1px solid black;
+                border-top-right-radius:5px;
+                 border-bottom-right-radius:5px;
+                border-left:0px;
+                position:absolute;
+                top:-8px;
+                left:32px;
+            }
+
+        </style>
+    </head>
+    <body><center>
+        <div class="f1">
+            <div class="eyes1">
+                <div class="eb1"></div>
+            </div>
+            <div class="eyes2">
+                <div class="eb2"></div>
+            </div>
+            <div class="h1"></div>
+            <div class="nose">
+                <div class="mouth"></div>
+                <div class="ear1"></div>
+                <div class="ear2"></div>
+            </div></div>
+            <div class="neck"></div>
+            <div class="bodyy">
+                <div class="p1">
+                    <div class="p11"></div>
+                    <div class="p12"></div>
+                    <div class="p13"></div>
+                </div>
+                <div class="p2">
+                    <div class="p21"></div>
+                    <div class="p22"></div>
+                    <div class="p23"></div>
+                    <div class="p24"></div>
+                    <div class="pant1"></div>
+                <div class="pant2"></div>
+                </div>
+<div class="pocket">
+    <div class="pi"></div>
+</div>
+<div class="hand1">
+    <div class="h11"></div>
+    <div class="h12">
+        <div class="fi1"></div>
+        <div class="fi2"></div>
+        <div class="fi3"></div>
+        <div class="fi4"></div>
+        <div class="fi5"></div>       
+    </div> 
+</div>
+<div class="hand2">
+    <div class="h21"></div>
+    <div class="h22">
+        <div class="fi11"></div>
+        <div class="fi22"></div>
+        <div class="fi33"></div>
+        <div class="fi44"></div>
+        <div class="fi55"></div>       
+    </div> 
+</div>
+<div class="leg1">
+    <div class="sock1"></div>
+    <div class="sock11"></div>
+    <div class="shoe1"></div>
+</div>
+<div class="leg2">
+    <div class="sock1"></div>
+    <div class="sock11"></div>
+    <div class="shoe1"></div>
+</div>
+</div>
+        </center>
+    </body>
+</html>

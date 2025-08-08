@@ -1,0 +1,184 @@
+<html>
+    <head><title>SOLAR SYSTEM</title>
+<style>
+    body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://images.unsplash.com/photo-1520257328559-2062fc7de0b3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjBzeXN0ZW0lMjBwbGFuZXRzfGVufDB8fDB8fHww");
+        background-repeat: no-repeat;
+        }
+        .five{
+              width:800px;
+            height: 800px;
+            border: 3px solid white;
+            border-radius: 50%;
+             position: relative;
+        }
+      .orbit-fi {
+        width: 100%;
+        height: 100%;
+        animation: ani 15s linear infinite;
+    }
+
+    .fi {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url("./JourneyLens_Files/SATURN.png");
+        background-size: contain;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+        .four{
+            width:700px;
+            height: 700px;
+            border: 3px solid #ffff;
+            border-radius: 50%;
+            position: relative;
+            top:-750px;
+            left:50px;
+        }
+        .orbit-fo {
+        width: 100%;
+        height: 100%;
+        animation: ani 15s linear infinite;
+    }
+        .fo{
+            width:100px;
+            height:100px;
+            border-radius: 50%;
+            background-image: url("./JourneyLens_Files/mars.jfif");
+            background-size: contain;
+            position: absolute;
+            top:40px;
+            left:100px;
+        }
+        .three{
+            width:600px;
+            height: 600px;
+            border: 3px solid #ffff;
+            border-radius: 50%;
+             position: relative;
+            top:-650px;
+            left:50px;
+        }
+        .or-th {
+        width: 100%;
+        height: 100%;
+        animation: ani 15s linear infinite;
+        z-index: 3;
+    }
+        .th{
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-image: url("./JourneyLens_Files/ear2.png");
+            background-size: contain;
+            position: absolute;
+            top:-50px;
+            left:250px;
+        }
+          .two{
+            width:500px;
+            height: 500px;
+            border: 3px solid #ffff;
+            border-radius: 50%;
+             position: relative;
+            top:-550px;
+            left:50px;
+            
+        }
+        .or-tw {
+        width: 100%;
+        height: 100%;
+        animation: ani 15s linear infinite;
+        
+    }
+        .tw{
+            width:90px;
+            height:90px;
+            border-radius: 50%;
+            background-image: url("./JourneyLens_Files/ven2.png");
+            background-size: contain;
+            position: absolute;
+            top:60px;
+            left:380px;
+        }
+        .one{
+            width:350px;
+            height: 350px;
+            border: 3px solid #ffff;
+            border-radius: 50%;
+             position: relative;
+            top:-430px;
+            left:70px;
+        }
+        .or-o {
+        width: 100%;
+        height: 100%;
+        animation: ani 15s linear infinite;
+    }
+        .on{
+            width:70px;
+            height:70px;
+            border-radius: 50%;
+            background-image: url("./JourneyLens_Files/MER.png");
+            background-size: contain;
+            position: absolute;
+            top:100px;
+            left:310px;
+        }
+        .sun{
+            width:150px;
+            height:150px;
+            position: relative;
+            border-radius: 50%;;
+            background-image: radial-gradient(yellow,orangered);
+            box-shadow: 0PX 0PX 30PX 20PX orangERED;
+            position: absolute;
+            top:100px;
+            left:100px;
+        }
+        
+         @keyframes ani{
+            0%{
+                transform: rotateZ(0deg) translateX(0px);
+            }
+            100%{
+                transform: rotateZ(360deg) translateX(0px);
+            }
+        }
+
+
+</style>
+    </head>
+    <body>
+        <div class="five">
+            <div class="orbit-fi">
+            <div class="fi"></div></div>
+            <div class="four">
+                <div class="orbit-fo">
+                <div class="fo"></div></div>
+            <div class="three">
+                <div class="or-th">
+                    <div class="th"></div>
+                </div>
+                <div class="two">
+                    <div class="or-tw">
+                        <div class="tw"></div>
+                    </div>
+                    <div class="one">
+                        <div class="or-o">
+                            <div class="on"></div>
+                        </div>
+                        <div class="sun"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    </body>
+</html>

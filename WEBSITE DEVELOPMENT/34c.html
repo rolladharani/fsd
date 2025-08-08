@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Animations2</title>
+        <style>
+            @keyframes DemoAnimation
+            {
+                0%{
+                background-color: rgba(255, 0,0, 0.2);
+                top:0px;
+                }
+                25%{
+                   left:100px;
+                    background-color: rgba(255, 0,0, 0.4);
+                }
+                50%{
+                    left:500px;
+                    background-color: rgba(255, 0,0, 0.6);
+                }
+                75%{
+                    left:800px;
+                    background-color: rgba(255, 0,0, 0.8);
+                }
+                100%{
+                    left:900px;
+                    background-color:rgba(255, 0,0, 1);
+                }
+            }
+            .Demo{
+                width: 100px;
+                height: 100px;
+                animation-name: DemoAnimation;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in;
+                position: relative;
+            }
+            .Demo2{
+                width: 100px;
+                height: 100px;
+                animation-name: DemoAnimation;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;
+                animation-delay: 1s;
+                animation-direction: alternate-reverse;
+                position: relative;
+            }
+            .Demo3{
+                width: 100px;
+                height: 100px;
+                animation-name: DemoAnimation;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                position: relative;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="Demo"></div>
+        <div class="Demo2"></div>
+        <div class="Demo3"></div>
+        <div class="Demo2"></div>
+        <div class="Demo"></div>
+        <div class="Demo2"></div>
+        <div class="Demo3"></div>
+        <div class="Demo2"></div>
+    </body>
+</html>

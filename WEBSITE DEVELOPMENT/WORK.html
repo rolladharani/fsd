@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surampalem Skills Swap & Community Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            color: #333; /* Dark gray text */
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White content background */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2c3e50; /* Dark blue-gray */
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db; /* Blue accent */
+            padding-bottom: 10px;
+        }
+        .card {
+            background-color: #ecf0f1; /* Light blue-gray for cards */
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .btn {
+            background-color: #3498db; /* Blue button */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s ease-in-out;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+        .btn-secondary {
+            background-color: #95a5a6; /* Gray button */
+            margin-left: 10px;
+        }
+        .btn-secondary:hover {
+            background-color: #7f8c8d; /* Darker gray on hover */
+        }
+        .alert {
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        /* Specific styling for different listing types */
+        .listing-skill-offer { border-left: 5px solid #27ae60; /* Green */ }
+        .listing-skill-need { border-left: 5px solid #e67e22; /* Orange */ }
+        .listing-job { border-left: 5px solid #8e44ad; /* Purple */ }
+        .listing-project { border-left: 5px solid #f1c40f; /* Yellow */ }
+        .listing-review { border-left: 5px solid #34495e; /* Darker blue-gray */ }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <div class="container">
+        <h1 class="text-3xl font-bold text-center mb-6 text-blue-800">Surampalem Community Hub: Skills, Jobs & Projects</h1>
+
+        <!-- Navigation Tabs -->
+        <div class="flex justify-center mb-6 space-x-4">
+            <button class="tab-button btn" data-tab="skills-jobs">Skills & Jobs</button>
+            <button class="tab-button btn" data-tab="projects">Projects</button>
+            <button class="tab-button btn" data-tab="self-learning">Self-Learning</button>
+            <button class="tab-button btn" data-tab="reviews">Reviews</button>
+            <button class="tab-button btn" data-tab="contact">Contact</button>
+        </div>
+
+        <!-- Skills & Jobs Section -->
+        <div id="skills-jobs" class="tab-content active">
+            <h2 class="section-title">Skills & Jobs Board</h2>
+            <p class="mb-4 text-gray-700">Connect with others in Surampalem for skill exchange, local jobs, or opportunities. Post what you offer or what you need!</p>
+
+            <div class="form-group">
+                <label for="skillJobType" class="form-label">Type of Post:</label>
+                <select id="skillJobType" class="form-select">
+                    <option value="skill-offer">Offer a Skill</option>
+                    <option value="skill-need">Need a Skill</option>
+                    <option value="job">Job Opportunity</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skillJobTitle" class="form-label">Title (e.g., "Electrician Available," "Need help with plumbing," "Shop Assistant Job"):</label>
+                <input type="text" id="skillJobTitle" class="form-input" placeholder="e.g., Basic Electrical Repairs, Part-time Tutor">
+            </div>
+            <div class="form-group">
+                <label for="skillJobDescription" class="form-label">Description:</label>
+                <textarea id="skillJobDescription" class="form-textarea" rows="3" placeholder="Provide details about the skill, job, or opportunity."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skillJobContact" class="form-label">Contact (Phone/WhatsApp/Email):</label>
+                <input type="text" id="skillJobContact" class="form-input" placeholder="e.g., 9876543210 or example@email.com">
+            </div>
+            <button id="postSkillJob" class="btn">Post Listing</button>
+            <div id="skillJobMessage" class="alert mt-3 hidden"></div>
+
+            <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-800">Current Listings:</h3>
+            <div id="skillJobListings" class="space-y-3">
+                <!-- Listings will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects" class="tab-content hidden">
+            <h2 class="section-title">Team Building for Projects</h2>
+            <p class="mb-4 text-gray-700">Have a community project idea or looking for collaborators? Post it here!</p>
+
+            <div class="form-group">
+                <label for="projectTitle" class="form-label">Project Title:</label>
+                <input type="text" id="projectTitle" class="form-input" placeholder="e.g., Community Garden Initiative, Local History Documentation">
+            </div>
+            <div class="form-group">
+                <label for="projectDescription" class="form-label">Project Description & Skills Needed:</label>
+                <textarea id="projectDescription" class="form-textarea" rows="4" placeholder="Describe your project and what kind of help you're looking for (e.g., gardening, writing, organizing)."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projectContact" class="form-label">Contact (Phone/WhatsApp/Email):</label>
+                <input type="text" id="projectContact" class="form-input" placeholder="e.g., 9876543210 or example@email.com">
+            </div>
+            <button id="postProject" class="btn">Post Project</button>
+            <div id="projectMessage" class="alert mt-3 hidden"></div>
+
+            <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-800">Active Projects:</h3>
+            <div id="projectListings" class="space-y-3">
+                <!-- Project listings will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Self-Learning Section -->
+        <div id="self-learning" class="tab-content hidden">
+            <h2 class="section-title">Self-Learning Skills & Resources</h2>
+            <p class="mb-4 text-gray-700">Empower yourself with new skills! Here are some general tips and resources for independent learning.</p>
+
+            <div class="card">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Tip 1: Start with the Basics of Digital Literacy</h3>
+                <p class="text-gray-700">Learning how to use a smartphone effectively, send emails, and browse the internet safely can open up many opportunities. Look for free tutorials on YouTube or ask a tech-savvy friend for help.</p>
+            </div>
+            <div class="card">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Tip 2: Local Craft & Trade Skills</h3>
+                <p class="text-gray-700">Many traditional skills like tailoring, basic carpentry, or cooking specific dishes are highly valued locally. Seek out experienced individuals in Surampalem who might be willing to teach. Check the "Skills & Jobs" board for potential mentors!</p>
+            </div>
+            <div class="card">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Tip 3: Free Online Courses (MOOCs)</h3>
+                <p class="text-gray-700">Platforms like Coursera, edX, or Khan Academy offer free courses on a wide range of subjects, from basic English to computer programming. Many require only an internet connection.</p>
+            </div>
+            <div class="card">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Tip 4: Read Local Newspapers & Community Notices</h3>
+                <p class="text-gray-700">Stay informed about local workshops, government training programs, or community initiatives that might offer learning opportunities. Knowledge is power!</p>
+            </div>
+            <div class="card">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Tip 5: Practice Consistently</h3>
+                <p class="text-gray-700">No matter what skill you're learning, consistent practice is key. Even 15-30 minutes a day can make a big difference over time.</p>
+            </div>
+        </div>
+
+        <!-- Reviews & Feedback Section -->
+        <div id="reviews" class="tab-content hidden">
+            <h2 class="section-title">Reviews & Feedback</h2>
+            <p class="mb-4 text-gray-700">Share your experience with services or collaborations found through this platform. Your feedback helps build trust in our community!</p>
+
+            <div class="form-group">
+                <label for="reviewerName" class="form-label">Your Name (Optional):</label>
+                <input type="text" id="reviewerName" class="form-input" placeholder="e.g., Anonymous or Your Name">
+            </div>
+            <div class="form-group">
+                <label for="reviewText" class="form-label">Your Feedback/Review:</label>
+                <textarea id="reviewText" class="form-textarea" rows="4" placeholder="Describe your experience here."></textarea>
+            </div>
+            <button id="submitReview" class="btn">Submit Feedback</button>
+            <div id="reviewMessage" class="alert mt-3 hidden"></div>
+
+            <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-800">Recent Feedback:</h3>
+            <div id="reviewListings" class="space-y-3">
+                <!-- Review listings will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Contact & Support Section -->
+        <div id="contact" class="tab-content hidden">
+            <h2 class="section-title">Contact & Support</h2>
+            <p class="mb-4 text-gray-700">For any questions, suggestions, or technical support regarding this platform, please reach out to the community administrators.</p>
+
+            <div class="card">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Community Admin Contact:</h3>
+                <p class="text-gray-700"><strong>Email:</strong> <a href="mailto:surampalem.community@example.com" class="text-blue-600 hover:underline">surampalem.community@example.com</a></p>
+                <p class="text-gray-700"><strong>WhatsApp (Admin):</strong> <a href="https://wa.me/919876543210" target="_blank" class="text-blue-600 hover:underline">+91 98765 43210</a> (Please use during business hours for non-emergencies)</p>
+                <p class="text-gray-700 mt-3">We aim to respond to all queries within 24-48 hours. Your patience is appreciated!</p>
+            </div>
+            <div class="card mt-4">
+                <h3 class="text-lg font-semibold mb-2 text-blue-700">Important Note:</h3>
+                <p class="text-gray-700">This platform is maintained by local volunteers. While we strive for accuracy and safety, we cannot guarantee the reliability of all user-generated content. Please exercise caution and good judgment when interacting with others or engaging in any transactions.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Utility Functions for localStorage ---
+        function getFromLocalStorage(key) {
+            try {
+                const data = localStorage.getItem(key);
+                return data ? JSON.parse(data) : [];
+            } catch (e) {
+                console.error("Error reading from localStorage", e);
+                return [];
+            }
+        }
+
+        function saveToLocalStorage(key, data) {
+            try {
+                localStorage.setItem(key, JSON.stringify(data));
+            } catch (e) {
+                console.error("Error writing to localStorage", e);
+            }
+        }
+
+        // --- UI Message Display ---
+        function showMessage(elementId, message, type) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.className = `alert mt-3 ${type === 'success' ? 'alert-success' : 'alert-error'}`;
+            element.classList.remove('hidden');
+            setTimeout(() => {
+                element.classList.add('hidden');
+            }, 5000);
+        }
+
+        // --- Skills & Jobs Logic ---
+        const skillJobTypeSelect = document.getElementById('skillJobType');
+        const skillJobTitleInput = document.getElementById('skillJobTitle');
+        const skillJobDescriptionInput = document.getElementById('skillJobDescription');
+        const skillJobContactInput = document.getElementById('skillJobContact');
+        const postSkillJobBtn = document.getElementById('postSkillJob');
+        const skillJobListingsDiv = document.getElementById('skillJobListings');
+
+        function renderSkillJobs() {
+            const listings = getFromLocalStorage('skillJobs');
+            skillJobListingsDiv.innerHTML = ''; // Clear existing listings
+            if (listings.length === 0) {
+                skillJobListingsDiv.innerHTML = '<p class="text-gray-600 italic">No listings yet. Be the first to post!</p>';
+                return;
+            }
+            listings.forEach((listing, index) => {
+                const card = document.createElement('div');
+                card.className = `card listing-${listing.type}`; // Add type-specific class for styling
+                card.innerHTML = `
+                    <h4 class="text-lg font-bold text-gray-900">${listing.title}</h4>
+                    <p class="text-sm text-gray-600 mb-2">${listing.type.replace('-', ' ').toUpperCase()}</p>
+                    <p class="text-gray-700 mb-2">${listing.description}</p>
+                    <p class="text-sm text-gray-500">Contact: ${listing.contact}</p>
+                    <button data-index="${index}" class="remove-skill-job-btn btn btn-secondary text-sm mt-2">Remove</button>
+                `;
+                skillJobListingsDiv.appendChild(card);
+            });
+
+            // Add event listeners to new remove buttons
+            document.querySelectorAll('.remove-skill-job-btn').forEach(button => {
+                button.onclick = (event) => removeSkillJob(event.target.dataset.index);
+            });
+        }
+
+        function addSkillJob() {
+            const type = skillJobTypeSelect.value;
+            const title = skillJobTitleInput.value.trim();
+            const description = skillJobDescriptionInput.value.trim();
+            const contact = skillJobContactInput.value.trim();
+
+            if (!title || !description || !contact) {
+                showMessage('skillJobMessage', 'Please fill in all fields.', 'error');
+                return;
+            }
+
+            const listings = getFromLocalStorage('skillJobs');
+            listings.push({ type, title, description, contact, timestamp: new Date().toISOString() });
+            saveToLocalStorage('skillJobs', listings);
+            renderSkillJobs();
+            showMessage('skillJobMessage', 'Listing posted successfully!', 'success');
+            skillJobTitleInput.value = '';
+            skillJobDescriptionInput.value = '';
+            skillJobContactInput.value = '';
+        }
+
+        function removeSkillJob(index) {
+            let listings = getFromLocalStorage('skillJobs');
+            if (confirm('Are you sure you want to remove this listing?')) { // Simple confirmation
+                listings.splice(index, 1);
+                saveToLocalStorage('skillJobs', listings);
+                renderSkillJobs();
+                showMessage('skillJobMessage', 'Listing removed.', 'success');
+            }
+        }
+
+        postSkillJobBtn.addEventListener('click', addSkillJob);
+
+        // --- Projects Logic ---
+        const projectTitleInput = document.getElementById('projectTitle');
+        const projectDescriptionInput = document.getElementById('projectDescription');
+        const projectContactInput = document.getElementById('projectContact');
+        const postProjectBtn = document.getElementById('postProject');
+        const projectListingsDiv = document.getElementById('projectListings');
+
+        function renderProjects() {
+            const projects = getFromLocalStorage('projects');
+            projectListingsDiv.innerHTML = ''; // Clear existing listings
+            if (projects.length === 0) {
+                projectListingsDiv.innerHTML = '<p class="text-gray-600 italic">No projects yet. Start a new collaboration!</p>';
+                return;
+            }
+            projects.forEach((project, index) => {
+                const card = document.createElement('div');
+                card.className = 'card listing-project';
+                card.innerHTML = `
+                    <h4 class="text-lg font-bold text-gray-900">${project.title}</h4>
+                    <p class="text-gray-700 mb-2">${project.description}</p>
+                    <p class="text-sm text-gray-500">Contact: ${project.contact}</p>
+                    <button data-index="${index}" class="remove-project-btn btn btn-secondary text-sm mt-2">Remove</button>
+                `;
+                projectListingsDiv.appendChild(card);
+            });
+
+            document.querySelectorAll('.remove-project-btn').forEach(button => {
+                button.onclick = (event) => removeProject(event.target.dataset.index);
+            });
+        }
+
+        function addProject() {
+            const title = projectTitleInput.value.trim();
+            const description = projectDescriptionInput.value.trim();
+            const contact = projectContactInput.value.trim();
+
+            if (!title || !description || !contact) {
+                showMessage('projectMessage', 'Please fill in all fields.', 'error');
+                return;
+            }
+
+            const projects = getFromLocalStorage('projects');
+            projects.push({ title, description, contact, timestamp: new Date().toISOString() });
+            saveToLocalStorage('projects', projects);
+            renderProjects();
+            showMessage('projectMessage', 'Project posted successfully!', 'success');
+            projectTitleInput.value = '';
+            projectDescriptionInput.value = '';
+            projectContactInput.value = '';
+        }
+
+        function removeProject(index) {
+            let projects = getFromLocalStorage('projects');
+            if (confirm('Are you sure you want to remove this project?')) {
+                projects.splice(index, 1);
+                saveToLocalStorage('projects', projects);
+                renderProjects();
+                showMessage('projectMessage', 'Project removed.', 'success');
+            }
+        }
+
+        postProjectBtn.addEventListener('click', addProject);
+
+        // --- Reviews & Feedback Logic ---
+        const reviewerNameInput = document.getElementById('reviewerName');
+        const reviewTextInput = document.getElementById('reviewText');
+        const submitReviewBtn = document.getElementById('submitReview');
+        const reviewListingsDiv = document.getElementById('reviewListings');
+
+        function renderReviews() {
+            const reviews = getFromLocalStorage('reviews');
+            reviewListingsDiv.innerHTML = ''; // Clear existing listings
+            if (reviews.length === 0) {
+                reviewListingsDiv.innerHTML = '<p class="text-gray-600 italic">No feedback yet. Share your experience!</p>';
+                return;
+            }
+            reviews.forEach((review, index) => {
+                const card = document.createElement('div');
+                card.className = 'card listing-review';
+                card.innerHTML = `
+                    <p class="text-gray-800 mb-2">"${review.text}"</p>
+                    <p class="text-sm text-gray-500">- ${review.name || 'Anonymous'}</p>
+                    <button data-index="${index}" class="remove-review-btn btn btn-secondary text-sm mt-2">Remove</button>
+                `;
+                reviewListingsDiv.appendChild(card);
+            });
+
+            document.querySelectorAll('.remove-review-btn').forEach(button => {
+                button.onclick = (event) => removeReview(event.target.dataset.index);
+            });
+        }
+
+        function addReview() {
+            const name = reviewerNameInput.value.trim();
+            const text = reviewTextInput.value.trim();
+
+            if (!text) {
+                showMessage('reviewMessage', 'Please enter your feedback.', 'error');
+                return;
+            }
+
+            const reviews = getFromLocalStorage('reviews');
+            reviews.push({ name, text, timestamp: new Date().toISOString() });
+            saveToLocalStorage('reviews', reviews);
+            renderReviews();
+            showMessage('reviewMessage', 'Feedback submitted successfully!', 'success');
+            reviewerNameInput.value = '';
+            reviewTextInput.value = '';
+        }
+
+        function removeReview(index) {
+            let reviews = getFromLocalStorage('reviews');
+            if (confirm('Are you sure you want to remove this feedback?')) {
+                reviews.splice(index, 1);
+                saveToLocalStorage('reviews', reviews);
+                renderReviews();
+                showMessage('reviewMessage', 'Feedback removed.', 'success');
+            }
+        }
+
+        submitReviewBtn.addEventListener('click', addReview);
+
+        // --- Tab Switching Logic ---
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Deactivate all tabs and content
+                tabButtons.forEach(btn => btn.classList.remove('active', 'btn-secondary'));
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                // Activate clicked tab and corresponding content
+                const targetTabId = button.dataset.tab;
+                document.getElementById(targetTabId).classList.remove('hidden');
+                button.classList.add('active', 'btn-secondary'); // Highlight active tab
+            });
+        });
+
+        // Initialize the app
+        window.onload = function() {
+            renderSkillJobs();
+            renderProjects();
+            renderReviews();
+            // Set initial active tab
+            document.querySelector('.tab-button[data-tab="skills-jobs"]').click();
+        };
+    </script>
+</body>
+</html>

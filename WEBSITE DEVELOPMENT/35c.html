@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Moon Animation</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            @keyframes Moon{
+                0%{
+                    box-shadow: 0px 0px 20px 10px grey;
+
+                }
+                50%{
+                box-shadow: 0px 0px 25px 25px grey;
+                }
+                100%{
+                    box-shadow: 0px 0px 30px 30px grey;
+                }
+            }
+            .Demo{
+                width:100px;
+                height:100px;
+                border-radius: 50%;
+                background-color:aliceblue;
+                animation-name:Moon;
+                animation-duration:2s;
+                animation-iteration-count: infinite;
+                position: relative;
+                top:20px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <center>
+        <div class="Demo">
+            
+        </div>
+        </center>
+
+    </body>
+</html>

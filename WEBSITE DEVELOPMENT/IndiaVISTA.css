@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+/* body{
+     overflow-x: hidden;
+} */
+header {
+    display: flex;
+    background-color: #ffffff;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b6b1b1;
+}
+.nav_bar {
+    display: flex;
+    min-width: 500px;
+    justify-content: space-evenly;
+}
+.nav_bar a {
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 28px 0;
+    border-bottom: 5px solid #ffffff;
+}
+.nav_bar a:hover {
+    border-bottom: 4px solid #f54e77;
+}
+.search_bar {
+    height: 40px;
+    min-width: 200px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.search_input {
+    color: #696e79;
+    background-color: #f5f5f6;
+    flex-grow: 1;
+    height: 40px;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+}
+.action_bar {
+    display: flex;
+    min-width: 200px;
+    justify-content: space-evenly;
+}
+.action_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_container {
+    padding: 30px 0px 40px 0px;
+    background: #FAFBFC;
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer_column {
+    display: flex;
+    flex-direction: column;
+}
+.footer_column h3 {
+    color: #282c3f;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.copyright {
+    color: #94969f;
+    text-align: end;
+    padding: 20px;
+}
+p{
+  font-family:Poppins, sans-serif;
+  position: relative;
+  left:250px;
+  font-size:20px;
+  margin:20px;
+  color:navy;
+}
+
+
+  .parent {
+    width: 100vw;
+    height: 100vh; 
+    background-image: url("M_3.jpeg");
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.JK{
+    font-size:10px;
+    color: black ;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:7.5vh;
+    left:40vw;
+    font-weight: bold;  
+}
+.JK a{
+text-decoration: none;
+color:inherit;
+}
+.pb{
+    font-size:10px;
+    color: darkblue ;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:20.5vh;
+    left:39vw;
+    font-weight: bold;  
+}
+.pb a{
+text-decoration: none;
+color:inherit;
+}
+
+.HP{
+    font-size:10px;
+    color: red;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:16.5vh;
+    left:41.5vw;
+    font-weight: bold;  
+}
+.HP a{
+text-decoration: none;
+color:inherit;
+}
+.UK{
+    font-size:10px;
+    color: red;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:23vh;
+    left:44vw;
+    font-weight: bold;  
+}
+.UK a{
+text-decoration: none;
+color:inherit;
+}
+.Har{
+    font-size:10px;
+    color: darkblue;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:25vh;
+    left:38.5vw;
+    font-weight: bold;  
+}
+.Har a{
+text-decoration: none;
+color:inherit;
+}
+.Raj{
+    font-size:10px;
+    color: white;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:33vh;
+    left:36vw;
+    font-weight: bold;  
+}
+.Raj a{
+text-decoration: none;
+color:inherit;
+}
+.Guj{
+    font-size:10px;
+    color: darkgreen;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:44vh;
+    left:33vw;
+    font-weight: bold;  
+}
+.Guj a{
+text-decoration: none;
+color:inherit;
+}
+.MP{
+    font-size:10px;
+    color: yellow;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:44vh;
+    left:41vw;
+    font-weight: bold;  
+}
+.MP a{
+text-decoration: none;
+color:inherit;
+}
+.UP{
+    font-size:10px;
+    color: black;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:32vh;
+    left:45vw;
+    font-weight: bold;  
+}
+.UP a{
+text-decoration: none;
+color:inherit;
+}
+.Bihar{
+    font-size:10px;
+    color: black;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:35.5vh;
+    left:54vw;
+    font-weight: bold;  
+}
+.Bihar a{
+text-decoration: none;
+color:inherit;
+}
+.Jhar{
+    font-size:10px;
+    color: white;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:42vh;
+    left:53vw;
+    transform:rotate(-38deg);
+    font-weight: bold;  
+}
+.Jhar a{
+text-decoration: none;
+color:inherit;
+}
+.WB{
+    font-size:10px;
+    color: greenyellow;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:43vh;
+    left:56.60vw;
+    font-weight: bold;  
+}
+.WB a{
+text-decoration: none;
+color:inherit;
+}
+.sik{
+    font-size:10px;
+    color: red;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:30vh;
+    left:58.5vw;
+    font-weight: bold;  
+}
+.sik a{
+text-decoration: none;
+color:inherit;
+}
+.Arp{
+    font-size:10px;
+    color: darkblue;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:26.75vh;
+    left:66vw;
+    font-weight: bold;  
+}
+.Arp a{
+text-decoration: none;
+color:inherit;
+}
+.As{
+    font-size:10px;
+    color: white;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:33vh;
+    left:63vw;
+    font-weight: bold;  
+}
+.As a{
+text-decoration: none;
+color:inherit;
+}
+.meg{
+    font-size:10px;
+    color: darkblue;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:36vh;
+    left:59.5vw;
+    font-weight: bold;  
+}
+.meg a{
+text-decoration: none;
+color:inherit;
+}
+.tr{
+    font-size:10px;
+    color: black;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:42vh;
+    left:61vw;
+    font-weight: bold;  
+}
+.tr a{
+text-decoration: none;
+color:inherit;
+}
+.ng{
+    font-size:10px;
+    color: rgb(16, 203, 63);
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:33.5vh;
+    left:67.5vw;
+    font-weight: bold;  
+}
+.ng a{
+text-decoration: none;
+color:inherit;
+}
+.ma{
+    font-size:10px;
+    color: rgb(31, 170, 180);
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:37vh;
+    left:66.5vw;
+    font-weight: bold;  
+}
+.ma a{
+text-decoration: none;
+color:inherit;
+}
+.mz{
+    font-size:10px;
+    color: rgb(100, 0, 100);
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:42vh;
+    left:65vw;
+    font-weight: bold;  
+}
+.mz a{
+text-decoration: none;
+color:inherit;
+}
+.mr{
+    font-size:10px;
+    color: white;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:54vh;
+    left:37vw;
+    font-weight: bold;  
+}
+.mr a{
+text-decoration: none;
+color:inherit;
+}
+.ch{
+    font-size:10px;
+    color: darkblue;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:50vh;
+    left:47vw;
+    transform: rotate(-50deg);
+    font-weight: bold;  
+}
+.ch a{
+text-decoration: none;
+color:inherit;
+}
+.od{
+    font-size:10px;
+    color: black;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:52vh;
+    left:52vw;
+    font-weight: bold;  
+}
+.od a{
+text-decoration: none;
+color:inherit;
+}
+.Ts{
+    font-size:10px;
+    color: black;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:61vh;
+    left:43.5vw;
+    font-weight: bold;  
+}
+.Ts a{
+text-decoration: none;
+color:inherit;
+}
+.Ap{
+    font-size:10px;
+    color: white ;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:66vh;
+    left:43vw;
+    transform:rotate(-38deg);
+    font-weight: bold;   
+}
+.Ap a{
+text-decoration: none;
+color:inherit;
+}
+.ka{
+    font-size:10px;
+    color: yellow;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:74vh;
+    left:39vw;
+    font-weight: bold;  
+}
+.ka a{
+text-decoration: none;
+color:inherit;
+}
+.Go{
+    font-size:10px;
+    color: darkgreen;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:67.5vh;
+    left:36vw;
+    font-weight: bold;  
+}
+.Go a{
+text-decoration: none;
+color:inherit;
+}
+.ke{
+    font-size:10px;
+    color: black;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:83vh;
+    left:39.5vw;
+    transform:rotate(60deg);
+    font-weight: bold;  
+}
+.Ke a{
+text-decoration: none;
+color:inherit;
+}
+.Tn{
+    font-size:10px;
+    color: darkblue;
+    font-family:Poppins,sans-serif;
+    font-style: italic;
+    position: absolute;
+    top:82.5vh;
+    left:41.5vw;
+    font-weight: bold;  
+}
+.Tn a{
+text-decoration: none;
+color:inherit;
+}

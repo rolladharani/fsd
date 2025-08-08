@@ -1,0 +1,306 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flipkart</title>
+        <style>
+            body{
+                margin:0;
+                padding:0px;
+                 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                 overflow-x: hidden;
+            }
+            .line{
+            width: 100%;
+           background-color:  black;
+        }
+        .header{
+        height:auto;
+        /* border: 2px solid black; */
+        display: flex;
+        padding-top:30px;
+        justify-content: space-evenly;
+        font-size: 20px;
+        }
+        .main{
+            height:auto;
+            width:auto;
+            background-color: rgb(239, 234, 234);
+            padding: 20px;
+            display: flex;
+            gap:5px;
+            justify-content: space-between;
+            /* flex-direction: column; */
+            /* flex-wrap: wrap; */
+        
+        }
+        .c1{
+            height:auto;
+            width:auto;
+            background-color:white ;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+        .store1{
+            display: flex;
+            justify-content: space-around;
+            padding: 15px;
+
+        }
+        .store2{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .t1{
+            padding-top: 15px;
+            font-weight: bold;
+            padding-left: 10px;
+            font-size: 23px;
+        }
+        .c2{
+            height:auto;
+            width:auto;
+            /* border: 2px solid black; */
+            background-color:white ;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+        }
+        .c3{
+            height:auto;
+            width:100%;
+            background-color:rgb(246,226,201) ;
+            background-image: url("./JourneyLens_Files/store3.png");
+            background-position: bottom right;
+            background-size: 80% 80%;
+            background-repeat: no-repeat;
+            display: flex;
+        }
+
+        .grid1{
+            height:600px;
+            /* border:2px solid rgb(239, 234, 234); */
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 3px;
+            margin: 10px;
+        }
+        .p1,.p2,.p3,.p4{
+            border:3px solid rgb(239, 234, 234);
+            margin:8px;
+            border-radius: 3px;
+        }
+        .i1{
+            text-align: center;
+            padding-top: 15px;
+
+        }
+        .i2{
+            font-weight: 450;
+            padding-left: 13px;
+            padding-top: 4px;
+
+        }
+        .i3{
+            font-weight: 750;
+            color: green;
+            padding-left: 13px;
+        }
+        .store31{
+            /* border:2px solid black; */
+            margin-top:80px;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .te1{
+            color: rgb(3, 103, 103);
+            font-size: 30px;
+            padding-top: 20px;
+            padding-left: 15px;
+            font-weight: bold;
+        }
+        .te2{
+            color: grey;
+            padding-top: 20px;
+            padding-left: 15px;
+        }
+        .btn{
+            margin-top: 30px;
+            margin-left: 15px;
+            padding: 10px;
+            width:100px;
+            height: 25px;
+            color: white;
+            background-color: rgb(3, 103, 103);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 15px;
+            
+        }
+     @media (max-width:1024px)
+    {
+        .c3{
+            background-size: contain;
+            background-position: center;
+            min-height: 300px;
+        }
+ .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .c1, .c2, .c3 {
+    width: 100%
+  }
+    }
+    @media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .login,.cart,.seller{
+        display: none ;
+    }
+    .menu{
+        font-size: 30px;
+    }
+    /* .c1, .c2, .c3 {
+        width: 100%;
+    } */
+    
+    .grid1 {
+        grid-template-columns: 1fr; 
+        height: auto;
+    }
+    .i2,.i3{
+        text-align: center;
+    }
+    }
+    @media (max-width: 426px)
+    {
+       .searchbar{
+            display: none;
+        }
+        .te1,.te2{
+            font-size:10px;
+           padding-left:0;
+           padding-top: 2px;
+
+            
+        }
+        .btn{
+            margin-top: 2px;
+            font-size: 10px;
+            width:60px;
+            height:10px;
+            margin-left: 0px;
+
+        }
+        .store31{
+
+            margin-top: 0px;
+            margin-left: 5px;
+
+        }
+    }
+
+ 
+
+        </style>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+   
+        <body>
+            <div class="line"></div>
+            <div class="header">
+                <div class="logo"><img src="./JourneyLens_Files/flipkartLOGO.png" height="50px;"></div>
+                <div class="searchbar"><input type="text" placeholder="&#x1F50D; Search for Products, Brands and More" style="width: 530px; border:none; background-color: #f1f5ff; padding: 10px; font-size:16px; border-radius: 4px;"></div>
+                <div class="login"><i class="fa-regular fa-circle-user"></i> Login <i class="fa-solid fa-angle-down"></i></div>
+                <div class="cart"><i class="fa-solid fa-cart-shopping"></i> Cart</div>
+                <div class="seller"><i class="fa-solid fa-store"></i> Become a Seller </div>
+                <div class="menu"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+            </div>
+            <div class="main">
+                    <div class="c1">
+                        <div class="store1">
+                        <div class="t1">Hair & Skin Care for Monsoon</div>
+                        <i class="fa-solid fa-angle-right" style="color: #fafcff; background-color: blue; border-radius: 50%; padding: 5px; width:23px; height:24px; font-size: 25px; text-align: center; margin-top: 15px;"></i>
+                </div> 
+                <div class="grid1">
+                            <div class="p1">
+                                <div class="i1"><img src="./JourneyLens_Files/p1.png"></div>
+                                <div class="i2">Face Wash</div>
+                                <div class="i3">Min. 50% Off</div>
+                            </div>
+                            <div class="p2">
+                                <div class="i1"><img src="./JourneyLens_Files/p2.png"></div>
+                                <div class="i2">Hair Serum</div>
+                                <div class="i3">Min. 50% Off</div>
+                            </div>
+                            <div class="p3">
+                                <div class="i1"><img src="./JourneyLens_Files/p3.png"></div>
+                                <div class="i2">Hair Claw</div>
+                                <div class="i3">Top Sellers</div>
+                            </div>
+                            <div class="p4">
+                                <div class="i1" style="padding-top: 30px;"><img src="./JourneyLens_Files/p4.png"></div>
+                                <div class="i2" style="padding-top: 30px;">Bath Soap</div>
+                                <div class="i3">Min. 50% Off</div>
+                            </div>
+                </div>
+            </div>
+                    <div class="c2">
+                        <div class="store2">
+                        <div class="t1">Fashion's Top Deals</div>
+                        <i class="fa-solid fa-angle-right" style="color: #fafcff; background-color: blue; border-radius: 50%; padding: 5px; width:23px; height:24px; font-size: 25px; text-align: center; margin-top: 15px;"></i>
+                </div>
+                <div class="grid1">
+                            <div class="p1">
+                                <div class="i1"><img src="./JourneyLens_Files/p5.png"></div>
+                                <div class="i2"  style="padding-top: 10px;">Men's Slippers & Flip ...</div>
+                                <div class="i3">Min. 70% Off</div>
+                            </div>
+                            <div class="p2">
+                                <div class="i1"><img src="./JourneyLens_Files/p6.png"></div>
+                                <div class="i2"  style="padding-top: 14px;">Mens's T-shirts</div>
+                                <div class="i3">Min. 50% Off</div>
+                            </div>
+                            <div class="p3">
+                                <div class="i1"><img src="./JourneyLens_Files/p7.png"></div>
+                                <div class="i2"  style="padding-top: 15px;">Casual Shirts</div>
+                                <div class="i3">Special offer</div>
+                            </div>
+                            <div class="p4">
+                                <div class="i1"><img src="./JourneyLens_Files/p8.png"></div>
+                                <div class="i2"  style="padding-top: 15px;">Women's Sarees</div>
+                                <div class="i3">Special offer</div>
+                            </div>
+                </div>
+                </div>
+                <div class="c3">
+                    <div class="store3">
+                    <div class="store31">
+                        <div class="te1">Shop your <br>
+                        fashion Needs</div>
+                        <div class="te2">with Latest & <br> Trendy Choices</div>
+                        <div class="btn">Shop Now &nbsp;<i class="fa-solid fa-angle-right" style="color: #fafcff;"></i> </div>
+                    </div>
+                     </div>   
+                </div>
+
+            </div>
+        </body>
+</html>

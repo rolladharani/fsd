@@ -1,0 +1,235 @@
+<!-- <html>
+    <head>
+        <title>Menu Bar Left Side</title>
+        <style>
+            .mobile-options{
+                width:200px;
+                height:100svh;
+                border:2px solid black;
+                position: absolute;
+                left:0px;
+                top:0px;
+                background-color: lightcyan;
+                transition: left 0.5s ease-out;
+            }
+            .mobile-options div{
+                padding: 10px;
+                border-bottom: 2px solid black;
+                border-radius: 5px;
+            }
+            .mobile-options div:hover{
+                background-color:rgb(37, 124, 154);
+            }
+            span{
+                /* border: 2px solid black; */
+                /* padding: 5px; */
+                text-align: end;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="Open()">Open Bar</button>
+        <div class="mobile-options">
+             <span onclick="closebar()">&#x2716;</span>
+            <div>Home</div>
+            <div>My Maya</div>
+            <div>Owl Code</div>
+            <div>APT</div>
+            <div>Contact</div>
+        </div>
+        <script>
+            function closebar(){
+                document.getElementsByClassName("mobile-options")[0].style="left:-220px;"
+            }
+            function Open()
+            {
+                document.getElementsByClassName("mobile-options")[0].style="left:0px;"
+            }
+
+        </script>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Krishi Bazaar - Marketplace</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7fff7;
+    }
+
+    header {
+      background-color: #e3f9e5;
+      padding: 30px 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+    }
+
+    header h3 {
+      color: #555;
+      font-weight: normal;
+    }
+
+    .search-bar {
+      background-color: #ffffff;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 2px solid #c8e6c9;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 220px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      justify-content: space-between;
+    }
+
+    .table-container {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #a5d6a7;
+      color: #1b5e20;
+    }
+
+    td.trend-up {
+      color: green;
+      font-weight: bold;
+    }
+
+    td.trend-down {
+      color: red;
+      font-weight: bold;
+    }
+
+    td.trend-stable {
+      color: orange;
+      font-weight: bold;
+    }
+
+    .gif-container {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .gif-container img {
+      width: 80%;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .highlight {
+      background-color: #fff8e1;
+      padding: 30px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .highlight h2 {
+      color: #ef6c00;
+    }
+
+    .highlight button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ef6c00;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .highlight button:hover {
+      background-color: #e65100;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚜 Krishi Bazaar – Where Every Harvest Has a Home 🏡</h1>
+    <h3>Empowering Farmers | Connecting Communities | Fresh, Local & Honest</h3>
+  </header>
+
+  <div class="search-bar">
+    🔍 Looking for something specific?
+    <input type="text" placeholder="Search your crop...">
+  </div>
+
+  <div class="content">
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Crop</th>
+          <th>Price (₹/kg)</th>
+          <th>Trend</th>
+          <th>Last Updated</th>
+        </tr>
+        <tr>
+          <td>🌾 Wheat</td>
+          <td class="trend-up">₹28</td>
+          <td>📈</td>
+          <td>2 mins ago</td>
+        </tr>
+        <tr>
+          <td>🥔 Potato</td>
+          <td class="trend-down">₹18</td>
+          <td>📉</td>
+          <td>Just now</td>
+        </tr>
+        <tr>
+          <td>🍅 Tomato</td>
+          <td class="trend-stable">₹24</td>
+          <td>⚖️</td>
+          <td>5 mins ago</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="gif-container">
+      <img src="https://media.giphy.com/media/1nXH9NqShnJbsK8uLb/giphy.gif" alt="Live Farming">
+      <p>Real-time Farm Monitoring 🌦️</p>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <h2>🌟 Crop of the Day: Organic Mangoes 🥭</h2>
+    <p>Freshly harvested from Konaseema! ₹70/kg. Limited stock.</p>
+    <button>Buy Now</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Digital Clock</title>
+    <Style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction:column;
+            font-family: Orbitron, sans-serif;;
+        }
+        .parent{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:5px dashed black;
+            /* position: relative; */
+            border-radius: 10px;
+            overflow: hidden;
+            /* animation: myani 1s linear; */
+
+        }
+        .min,.sec{
+            width: 200px;
+            height:150px;
+            background-image:linear-gradient(lightblue,rgb(137, 137, 137));
+            /* border:3px solid black; */
+            /* border-radius: 5px; */
+            font-size: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+
+    </Style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+ </head>
+    <body>
+        <!-- <div class="box"></div> -->
+         <h1 style="color: rgb(29, 96, 94); font-size: 40px;">STOP WATCH</h1>
+        <div class="parent">
+            <div class="min"></div>
+            <span style="background-image:linear-gradient(lightblue,rgb(137, 137, 137)); font-size: 100px; height: 150px;">: </span>
+            <div class="sec"></div>
+        </div>
+        <script src="Digclock.js"></script>
+    </body>
+</html>

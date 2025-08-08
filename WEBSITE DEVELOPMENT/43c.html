@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Transition Task</title>
+        <style>
+            body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .demo{
+                width:100px;
+                height:200px;
+                background-color: blueviolet;
+                transition-property: width;
+                transition-duration: 2s;
+                /* animation-name:my_transition; */
+            }
+            .demo:hover{
+                width:300px;
+
+            }
+            /* @keyframes my_transition{
+                from{
+                width:100px;
+                }
+                to{
+                    width:300px;
+                }
+                
+            } */
+
+        </style>
+    </head>
+    <body>
+        <div class="demo"></div>
+
+    </body>
+</html>

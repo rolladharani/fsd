@@ -1,0 +1,190 @@
+body {
+    font-family: 'Inter', sans-serif !important;
+    background-color: #f8fafc !important;
+}
+
+        .gradient-bg {
+            background: linear-gradient(to right, #6EE7B7, #3B82F6); /* Teal to Blue gradient */
+        }
+        .feature-icon {
+            font-size: 2.5rem; /* Larger icons */
+            color: #3B82F6; /* Blue color for icons */
+        }
+        /* Custom styles for responsiveness and aesthetics */
+        .card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .icon-small {
+            font-size: 1.5rem; /* For smaller icons within text */
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+        /* Carousel specific styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            padding: 2rem; /* Add padding inside slides */
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for visibility */
+            color: white;
+            border: none;
+            padding: 1.25rem 1.5rem; /* Larger buttons */
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 9999px; /* Full rounded */
+            font-size: 1.5rem; /* Larger arrow icons */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1); /* Slight scale on hover */
+        }
+        .carousel-button.prev {
+            left: 1rem;
+        }
+        .carousel-button.next {
+            right: 1rem;
+        }
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem; /* More space below carousel */
+        }
+        .indicator {
+            width: 1rem; /* Larger indicators */
+            height: 1rem; /* Larger indicators */
+            background-color: #94A3B8; /* Gray-400 */
+            border-radius: 50%;
+            margin: 0 0.35rem; /* More space between indicators */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .indicator.active {
+            background-color: #3B82F6; /* Blue-500 */
+            transform: scale(1.2); /* Active indicator slightly larger */
+        }
+
+        /* Specific height adjustments for carousels */
+        #hero-carousel-container {
+            min-height: 380px; /* Increased height for hero carousel */
+            display: flex; /* To center content vertically */
+            align-items: center;
+            justify-content: center;
+        }
+        #hero-carousel-slides .carousel-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #features-carousel-container {
+            min-height: 480px; /* Increased height for features carousel */
+            background-color: white; /* Ensure background for feature cards */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #features-carousel-slides .carousel-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%; /* Make slide take full height of container */
+        }
+
+        #app-carousel-container {
+            min-height: 580px; /* Increased height for app carousel */
+            max-width: 650px; /* Increased max-width for app carousel */
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #app-carousel-slides .carousel-slide img {
+            max-height: 550px; /* Ensure images fit within the increased height */
+            width: auto; /* Maintain aspect ratio */
+            object-fit: contain;
+        }
+
+
+        .carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slides Wrapper */
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each Slide */
+.carousel-slide {
+    flex: 0 0 100%;
+    padding: 2rem;
+    background-color: #f9fafb;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #111827;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 9999px;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+.carousel-button.next {
+    right: 1rem;
+}
+
+/* Indicators */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #d1d5db;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #10b981; /* Tailwind emerald-500 */
+}

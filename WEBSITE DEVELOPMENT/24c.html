@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Justify Align</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: repeat(3, 200px);
+      gap: 2px;
+      background-color: white;
+    }
+
+    .cell {
+      display: grid;
+      background-color: #d46309;
+    }
+
+    /* .box {
+      width: 50px;
+      height: 50px;
+      background-color: black;
+    } */
+/* Value	Meaning	Direction
+start	Align to left	←
+center	Align to center	⬍
+end	     Align to right	→
+
+Value	Meaning	Direction
+start	Align to top	↑
+center	Align to center	⬌
+end	    Align to bottom	↓ */
+
+    /* Updated based on image */
+    .one   { justify-self: end; align-self: end; }      /* bottom-right */
+    .two   { justify-self: center; align-self: end; }   /* bottom-center */
+    .three { justify-self: start; align-self: end; }    /* bottom-left */
+
+    .four  { justify-self: end; align-self: center; } /* middle-left */
+    .five  { justify-self: center; align-self: center; }/* center */
+    .six   { justify-self: start; align-self: center; }   /* middle-right */
+
+    .seven { justify-self: end; align-self: start; }  /* top-left */
+    .eight { justify-self: center; align-self: start; } /* top-center */
+    .nine  { justify-self: start; align-self: start; }    /* top-right */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cell"><div class="box one"></div></div>
+    <div class="cell"><div class="box two"></div></div>
+    <div class="cell"><div class="box three"></div></div>
+    <div class="cell"><div class="box four"></div></div>
+    <div class="cell"><div class="box five"></div></div>
+    <div class="cell"><div class="box six"></div></div>
+    <div class="cell"><div class="box seven"></div></div>
+    <div class="cell"><div class="box eight"></div></div>
+    <div class="cell"><div class="box nine"></div></div>
+  </div>
+</body>
+</html>
