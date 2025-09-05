@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharani's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400; 
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: black;
+            color: white; 
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center; 
+            background-color: rgb(49, 49, 49);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            padding: 20px 0; 
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .item {
+            text-decoration: none;
+            color: white;
+            font-weight: 500; 
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 10px 20px;
+        }
+        
+        .item:hover {
+            color: green;
+            transform: translateY(-2px);
+        }
+
+        .part1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            gap: 50px;
+            margin-top: 80px; 
+            flex-wrap: wrap;
+        }
+
+        .left, .right {
+            flex: 1;
+            max-width: 500px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .left {
+            text-align: left;
+        }
+
+        .left p:nth-child(1) {
+            color: green;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .left h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: green;
+        }
+
+        .left h2 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .sum {
+            max-width: 400px;
+            padding: 20px 0;
+            font-size: 20px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+        .loc h6 {
+            padding-top: 20px;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .right img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 50%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 20px;
+            }
+            .item {
+                padding: 10px 0;
+                text-align: center;
+                width: 100%;
+            }
+            .sum{
+        
+                margin-left: auto;
+                margin-right:auto ;
+
+            }
+            .part1 {
+                margin-top: 300px;
+                flex-direction: column;
+                text-align: center;
+            }
+            .left, .right {
+                max-width: 100%;
+            }
+            .left p, .left h1, .left h2 {
+                text-align: center;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#" class="item">About</a>
+            <a href="#" class="item">Skills</a>
+            <a href="#" class="item">Projects</a>
+            <a href="#" class="item">Internship</a>
+            <a href="#" class="item">Achievements</a>
+            <a href="#" class="item">Certifications</a>
+            <a href="#" class="item">Education</a>
+        </div>
+    </header>
+    <div class="part1">
+        <div class="left">
+            <p style="color: grey;">THIS IS</p>
+            <h1>Dharani Sri Maha Rolla</h1>
+            <h2>Aspiring Software Developer</h2>
+            <p class="sum">Motivated and passionate student with a strong interest in coding and logical problem-solving. Known for working with focus, efficiency, and a results-driven mindset. Seeking a challenging role to apply my skills and contribute to impactful projects.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dharani-r-a1937028b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/rolladharani" target="_blank"><i class="fab fa-github"></i></a> 
+            </div>
+            <div class="loc">
+                <h6><i class="fa-solid fa-location-dot" style="color: green;"></i> Kakinada, India</h6>
+            </div>
+        </div>
+        <div class="right">
+            <img src="Circleimg.jpeg" alt="Image" style="border-radius: 50%; width: 450px; height: 450px;">
+        </div>
+    </div>
+</body>
+</html>
