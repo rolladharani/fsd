@@ -1,0 +1,361 @@
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 400; 
+                line-height: 1.6;
+                overflow-x: hidden;
+                background-color: black;
+                color: white; 
+            }
+
+            .navbar {
+                display: flex;
+                justify-content: center; 
+                background-color: rgb(49, 49, 49);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+                padding: 20px 0; 
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                animation: fadeIn 1.5s ease-out;
+            }
+
+            .item {
+                text-decoration: none;
+                color: white;
+                font-weight: 500; 
+                transition: color 0.3s ease, transform 0.3s ease;
+                padding: 10px 20px;
+            }
+            
+            .item:hover {
+                color: green;
+                transform: translateY(-2px);
+            }
+
+            .part1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 20px;
+                gap: 50px;
+                margin-top: 80px; 
+                flex-wrap: wrap;
+            }
+
+            .left, .right {
+                margin-top:70px;
+                flex: 1;
+                max-width: 500px;
+                animation: fadeIn 1.5s ease-out;
+            }
+            
+            .left {
+                text-align: left;
+            }
+
+            .left p:nth-child(1) {
+                color: green;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 5px;
+            }
+
+            .left h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+                color: green;
+            }
+
+            .left h2 {
+                font-size: 1.5rem;
+                color: white;
+                margin-bottom: 10px;
+            }
+
+            .sum {
+                max-width: 400px;
+                padding: 20px 0;
+                font-size: 20px;
+            }
+
+            .social-icons {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .social-icons a {
+                color: white;
+                font-size: 1.8rem;
+                transition: color 0.3s;
+            }
+            .loc h6 {
+                padding-top: 20px;
+                font-size: 1rem;
+                color: white;
+            }
+
+            .right img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 50%;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px 20px;
+                }
+                .item {
+                    padding: 10px 0;
+                    text-align: center;
+                    width: 100%;
+                }
+                .sum{
+            
+                    margin-left: auto;
+                    margin-right:auto ;
+
+                }
+                .part1 {
+                    margin-top: 250px;
+                    flex-direction: column;
+                    text-align: center;
+                }
+                .left, .right {
+                    max-width: 100%;
+                }
+                .left p, .left h1, .left h2 {
+                    text-align: center;
+                }
+                .social-icons {
+                    justify-content: center;
+                }
+            }
+            .skills{
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        
+                    .s1 {
+                color: green;
+                font-weight: 900;
+                padding: 10px;
+                position: relative; 
+                display:block; 
+                font-size: 40px;
+            }
+            .s1::after {
+                content: '';
+                display: block; 
+                width: 80px;
+                height: 4px;
+                background-color: green; 
+                border-radius: 2px;
+                margin: 0 auto; 
+            }
+            .s2box{
+
+                margin-top: 40px;
+                background-color: rgb(49, 49, 49);
+                width: 90%; 
+                max-width: 700px;
+                padding: 40px 30px;
+                border-radius: 10px;
+                transition: transform 0.4s ease, box-shadow 0.4s ease;
+                margin-left: auto;
+                margin-right: auto;
+        
+                }
+                .s2box h2{
+                    color: green;
+                    padding-bottom: 20px;
+                }
+                    .s2box:hover{
+                        transform: translateY(-7px);
+                        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+                    }
+                    .pro{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin-top: 50px;
+                    }
+                .gallery{
+                    margin-top: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    gap:50px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    
+                    }
+                    .card1,.card2{
+                        background-color: rgb(49, 49, 49);
+                        width: 90%;
+                        max-width: 500px;
+                        height: auto;
+                        border-radius: 10px;
+                        padding: 30px;
+                        line-height: 1.8rem;
+                        transition: transform 0.4s ease, box-shadow 0.4s ease;
+                    }
+                .card1:hover,.card2:hover{
+                    transform: translateY(-10px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);;
+                }
+                .card1 h2,.card2 h2
+                {
+                    color:green;
+                }
+                .card1 p,.card2 p
+                {
+                    margin-top: 8px;
+                }
+                .card1 button ,.card2 button{
+                    margin-top: 10px;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    font-weight: 600;
+                    /* background-color: green; */
+                }
+                .intern{
+                    margin-top: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .internship-card {
+                    background-color: rgb(49, 49, 49);
+                    width: 90%;
+                    max-width: 800px;
+                    height: auto;
+                    padding: 30px;
+                    line-height: 1.8rem;
+                    margin-top: 40px;
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.4s ease, box-shadow 0.4s ease;
+                    border-radius: 15px;
+                }
+
+                .internship-card:hover {
+                    transform: translateY(-7px);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+                }
+
+                .internship-card h3{
+                    color: green;
+                    padding-bottom: 10px;
+                    font-size: 1.8rem;
+                }
+
+                .internship-card p {
+                    color: white;
+                }
+                    .internship-card::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 50px;
+                        height: 50px;
+                        background-color: green;
+                        border-bottom-left-radius: 15px;
+                    }
+                    .internship-card::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 50px;
+                        height: 50px;
+                        background-color: green;
+                        border-top-right-radius: 15px;
+                    }
+                    .achievements {
+                        margin-top: 60px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 40px;
+                        padding: 20px;
+                    }
+                    .achievement-card {
+                        background-color: rgb(49, 49, 49);
+                        width: 250px;
+                        height: 250px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 20px;
+                        position: relative;
+                        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                    }
+                    .achievement-card p {
+                        color: white;
+                        font-size: 1.1rem;
+                        line-height: 1.6;
+                        position: relative;
+                        z-index: 2;
+                    }
+                    .achievement-card p strong {
+                        color: green;
+                        font-weight: 600;
+                    }
+                    .certifications{
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;    
+                    }
+                    .cert-card{
+                        margin-top: 10px;
+                        background-color: rgb(49, 49, 49);
+                        width: 50%; 
+                        max-width: 700px;
+                        padding: 30px 30px;
+                        border-left: 5px solid green;
+                    }
+                    .edu{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 60px;
+                        margin-bottom: 100px;
+                    }
+                    footer{
+                        background-color: rgb(49, 49, 49);
+                        text-align: center;
+                        padding: 40px;
+
+                    }
