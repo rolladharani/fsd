@@ -1,193 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dharani's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400; 
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-color: black;
-            color: white; 
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center; 
-            background-color: rgb(49, 49, 49);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-            padding: 20px 0; 
-            position: fixed; 
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            animation: fadeIn 1.5s ease-out;
-        }
-
-        .item {
-            text-decoration: none;
-            color: white;
-            font-weight: 500; 
-            transition: color 0.3s ease, transform 0.3s ease;
-            padding: 10px 20px;
-        }
-        
-        .item:hover {
-            color: green;
-            transform: translateY(-2px);
-        }
-
-        .part1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            gap: 50px;
-            margin-top: 80px; 
-            flex-wrap: wrap;
-        }
-
-        .left, .right {
-            flex: 1;
-            max-width: 500px;
-            animation: fadeIn 1.5s ease-out;
-        }
-        
-        .left {
-            text-align: left;
-        }
-
-        .left p:nth-child(1) {
-            color: green;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .left h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            color: green;
-        }
-
-        .left h2 {
-            font-size: 1.5rem;
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        .sum {
-            max-width: 400px;
-            padding: 20px 0;
-            font-size: 20px;
-        }
-
-        .social-icons {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 1.8rem;
-            transition: color 0.3s;
-        }
-        .loc h6 {
-            padding-top: 20px;
-            font-size: 1rem;
-            color: white;
-        }
-
-        .right img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 50%;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: center;
-                padding: 10px 20px;
-            }
-            .item {
-                padding: 10px 0;
-                text-align: center;
-                width: 100%;
-            }
-            .sum{
-        
-                margin-left: auto;
-                margin-right:auto ;
-
-            }
-            .part1 {
-                margin-top: 300px;
-                flex-direction: column;
-                text-align: center;
-            }
-            .left, .right {
-                max-width: 100%;
-            }
-            .left p, .left h1, .left h2 {
-                text-align: center;
-            }
-            .social-icons {
-                justify-content: center;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <a href="#" class="item">About</a>
-            <a href="#" class="item">Skills</a>
-            <a href="#" class="item">Projects</a>
-            <a href="#" class="item">Internship</a>
-            <a href="#" class="item">Achievements</a>
-            <a href="#" class="item">Certifications</a>
-            <a href="#" class="item">Education</a>
-        </div>
-    </header>
-    <div class="part1">
-        <div class="left">
-            <p style="color: grey;">THIS IS</p>
-            <h1>Dharani Sri Maha Rolla</h1>
-            <h2>Aspiring Software Developer</h2>
-            <p class="sum">Motivated and passionate student with a strong interest in coding and logical problem-solving. Known for working with focus, efficiency, and a results-driven mindset. Seeking a challenging role to apply my skills and contribute to impactful projects.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/dharani-r-a1937028b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/rolladharani" target="_blank"><i class="fab fa-github"></i></a> 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dharani's Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="./Task_Portfolio.css">
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <a href="#" class="item" onclick="scrolltosection(event, 'ABOUT')">About</a>
+                <a href="#" class="item" onclick="scrolltosection(event, 'SKILLS&')">Skills</a>
+                <a href="#" class="item" onclick="scrolltosection(event, 'PROJECTS')">Projects</a>
+                <a href="#" class="item" onclick="scrolltosection(event, 'INTERNSHIP')">Internship</a>
+                <a href="#" class="item" onclick="scrolltosection(event, 'ACHIEVE')">Achievements</a>
+                <a href="#" class="item" onclick="scrolltosection(event, 'CERTIFICATE')">Certifications</a>
+                <a href="#" class="item" onclick="scrolltosection(event, 'EDUCATION')">Education</a>
             </div>
-            <div class="loc">
-                <h6><i class="fa-solid fa-location-dot" style="color: green;"></i> Kakinada, India</h6>
+        </header>
+        <div id="ABOUT">
+        <div class="part1">
+            <div class="left">
+                <p style="color: grey;">THIS IS</p>
+                <h1>Dharani Sri Maha Rolla</h1>
+                <h2>Aspiring Software Developer</h2>
+                <p class="sum">Motivated and passionate student with a strong interest in coding and logical problem-solving. Known for working with focus, efficiency, and a results-driven mindset. Seeking a challenging role to apply my skills and contribute to impactful projects.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/dharani-r-a1937028b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/rolladharani" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:rolladharani77@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a> 
+                    <a href="tel:+91 9912558090" target="_blank"><i class="fas fa-phone"></i> </a>
+                </div>
+                <div class="loc">
+                    <h6><i class="fa-solid fa-location-dot" style="color: green;"></i> Kakinada, India</h6>
+                </div>
+            </div>
+            <div class="right">
+                <img src="Circleimg.jpeg" alt="Image" style="border-radius: 50%; width: 450px; height: 450px;">
             </div>
         </div>
-        <div class="right">
-            <img src="Circleimg.jpeg" alt="Image" style="border-radius: 50%; width: 450px; height: 450px;">
         </div>
+    <div id="SKILLS&">
+        <div class="skills">
+            <h1 class="s1">Skills & Interests</h1>
+            <div class="s2box">
+                <h2><i class="fas fa-code"></i>&nbsp; Programming Languages</h2>
+                <p style="color:white;">C++, C, Java, Python</p>
+            </div>
+            <div class="s2box">
+                        <h2><i class="fas fa-desktop"></i>&nbsp; Web Technologies</h2>
+                        <p style="color:white;">HTML, CSS, JavaScript</p>
+                    </div>
+                    <div class="s2box">
+                        <h2><i class="fas fa-database"></i>&nbsp; Database</h2>
+                        <p style="color:white;">SQL Database (MySQL)</p>
+                    </div>
+                    <div class="s2box">
+                        <h2> <i class="fa-solid fa-hard-drive"></i>&nbsp; Operating Systems</h2>
+                        <p style="color:white;">Windows, Linux</p>
+                    </div>
+                    <div class="s2box">
+                        <h2><i class="fa fa-briefcase"></i>&nbsp; Professional Skills</h2>
+                        <p>Time Management, Communication, Teamwork, Adaptability</p>
+                    </div>
+        </div></div>
+        <div id="PROJECTS">
+        <div class="pro">
+            <h1 class="s1">Technical Projects</h1></div>
+                    <div class="gallery">
+                <div class="card1">
+                <h2>IndiVista</h2>
+                <p>IndiVista is a web application that showcases the beauty of India's states. It highlights attractions like temples and waterfalls through a clean, visually consistent interface designed for smooth browsing and a rich cultural experience.</p>
+                <h2 style="margin-top: 10px;">Highlights</h2>
+                <ul>
+                <li>Showcases Indian states with a focus on temples and waterfalls.</li>
+                <li>Features a clean interface for smooth and consistent browsing.</li>
+                </ul>
+                <button>HTML</button> &nbsp;&nbsp; <button>CSS</button>
+                </div>
+                <div class="card2">
+                <h2>AgriAssist</h2>
+                <p>AgriAssist is a smart platform that supports rural communities. It provides essential tools like real-time weather updates and crop suggestions, simplifying complex agricultural data through a user-friendly interface to help farmers make informed decisions.</p>
+                <h2 style="margin-top: 10px;">Highlights</h2>
+                <ul>
+                <li>Provides farmers with real-time data to help them make informed decisions.</li>
+                <li>Offers a user-friendly platform with features like crop suggestions.</li>
+                </ul>
+                <button>HTML</button> &nbsp;&nbsp; <button>CSS</button> &nbsp;&nbsp; <button>JavaScript</button>
+                </div>
+                </div>
+                </div>
+                <div id="INTERNSHIP"></div>
+                            <div class="intern">
+                <h1 class="s1">Internship</h1>
+                <div class="internship-card">
+                    <br>
+                <h3>Frontend Development Intern</h3>
+                <p>
+                <strong>Technical Hub</strong> | Surampalem, Andhra Pradesh &nbsp; | &nbsp; 01-05-2025 to 30-06-2025
+                </p>
+                <p style="margin-top: 10px;">Completed a hands-on internship focused on frontend development using HTML and CSS. I designed and implemented responsive, user-friendly interfaces, ensuring mobile compatibility and visual appeal. I also contributed to website layout and styling, which enhanced overall usability and design consistency, and strengthened my knowledge of core web technologies.</p>
+                <p style="margin-top: 10px;">
+                Certificate:&nbsp;  <a href="https://drive.google.com/file/d/1Ap4CrdiRBT1DZ3OPTEJ62JqvOjJFSr-3/view?usp=sharing" target="_blank" style="color: green; text-decoration: none;">Link</a>
+                </p><br>
+                </div>
+                </div>
+                <div id="ACHIEVE">
+        <div class="achievements">
+            <h1 class="s1">Achievements</h1>
+
+                        <div class="achievement-card">
+                            <p>Solved 450+ problems on <strong>CodeChef</strong>.</p>
+                        </div>
+
+                        <div class="achievement-card">
+                            <p>Solved 100+ problems on <strong>LeetCode</strong>.</p>
+                        </div>
+                        <div class="achievement-card">
+                            <p>Solved 80+ problems on <strong>GeeksforGeeks</strong>.</p>
+                        </div>
+
+                        <div class="achievement-card">
+                            <p>Achieved 5-star golden badge in SQL on <strong>HackerRank</strong>.</p>
+                        </div>
+                        
+
+                        <div class="achievement-card">
+                            <p>Participated in the "Code Reto" coding event organized by <strong>Aditya University</strong>, enhancing problem-solving skills. </p>
+                        </div>
+
+                    </div>
     </div>
-</body>
-</html>
+        <div id="CERTIFICATE">
+                <div class="certifications">
+                    <h1 class="s1">Certifications</h1>
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>&nbsp;&nbsp;
+                        <span>Certified in HTML and CSS from <a href="https://drive.google.com/file/d/1yZO84xcT7EU5R5FLQOs3hDt5fo10X2oV/view?usp=sharing" target="_blank" style="color: green; text-decoration: none;"><strong>Certiport IT Pearson</strong></a>.</span>
+                    </div>
+
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>&nbsp;&nbsp;
+                        <span>Certified in Java Foundations from <a href="https://drive.google.com/file/d/1iU6klwA7eHh3WHg_BOxYRNwGWOub499t/view?usp=sharing" target="_blank" style="color: green; text-decoration: none;"><strong>Oracle Academy</strong></a>.</span>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>&nbsp;&nbsp;
+                        <span>Earned an <a href="https://drive.google.com/file/d/1kHE0KcZqwuhN3FX9E93A-tHe5iRo1n-j/view?usp=sharing" target="_blank" style="color: green; text-decoration: none;"><strong>Infosys Springboard</strong></a> certification on Validating HTML Forms using JavaScript.</span>
+                    </div>
+
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>&nbsp;&nbsp;
+                        <span>Earned the <a href="https://drive.google.com/file/d/1hUzKJoM4QzltVo1K5uZUsQxDkchE8K8C/view?usp=sharing" target="_blank" style="color: green; text-decoration: none;"><strong>HackerRank Certified SQL (Basic)</strong></a> certificate.</span>
+                    </div>
+
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>&nbsp;&nbsp;
+                        <span>Achieved <a href="https://drive.google.com/file/d/1JA5RaJ2dxkL4zbqZuXC4ti3fB2DZtX8T/view?usp=sharing" target="_blank" style="color: green; text-decoration: none;"><strong>Red Hat Certified System Administrator (RHCSA)</strong></a> certification.</span>
+                    </div>
+                </div></div>
+                <div id="EDUCATION">
+                <div class="edu">
+                    <h1 class="s1">Education</h1>
+                <div class="s2box">
+                        <h3 style="color: green;">Bachelor of Technology, Computer Science Engineering</h3>
+                        <p><strong>Aditya College of Engineering and Technology</strong> &nbsp; | &nbsp; 2023 - 2027</p>
+                        <p><strong>CGPA:</strong> 8.99</p>
+                    </div>
+                    <div class="s2box">
+                        <h3 style="color: green;">Intermediate, MPC</h3>
+                        <p><strong>Sri Chaitanya Junior College</strong> &nbsp; | &nbsp; 2021 - 2023</p>
+                        <p><strong>Percentage:</strong> 92.3</p>
+                    </div></div></div>
+                    <footer>
+                        <p>Built by Dharani Sri Maha Rolla❤️</p>
+                    </footer>
+                <script>
+            function scrolltosection(event, id) {
+                event.preventDefault();
+                const section = document.getElementById(id);
+                if (section) { 
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+            // function scrolltosection() {
+            //     const section = document.getElementById("ABOUT");
+            //     section.scrollIntoView({ behavior: "smooth" });
+            // }
+            // function scrolltosection2() {
+            //     const section = document.getElementById("SKILLS&");
+            //     section.scrollIntoView({ behavior: "smooth" });
+            // }
+            // function scrolltosection3() {
+            //     const section = document.getElementById("PROJECTS");
+            //     section.scrollIntoView({ behavior: "smooth" });
+            // }
+            // function scrolltosection4() {
+            //     const section = document.getElementById("INTERNSHIP");
+            //     section.scrollIntoView({ behavior: "smooth" });
+            // }
+        
+    </script>
+    </body>
+    </html>
