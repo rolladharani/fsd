@@ -110,6 +110,7 @@
                 display: block;
                 border-radius: 50%;
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+                /* box-shadow: 0px 0px 50px 30px rgb(49,49,49) ; */
             }
 
             @keyframes fadeIn {
@@ -359,3 +360,4 @@
                         padding: 40px;
 
                     }
+                    
